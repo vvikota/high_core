@@ -23,11 +23,19 @@ section{
   padding-left: 80px;
 }
 
-.section-title{
+h2{
   font-family: Gilroy, sans-serif;
   font-size: 96px;
   font-weight: 700;
   line-height: 100px;
+  color: #ffffff;
+}
+
+h5{
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
   color: #ffffff;
 }
 
@@ -151,12 +159,6 @@ header .header-menu {
   height: 8px;
   background-color: #28C76A;
 }
-
-/* .home{
-  padding-top: 165px;
-  padding-bottom: 100px;
-  padding-left: 80px;
-} */
 
 .home .pre-title{
   display: flex;
@@ -417,11 +419,6 @@ header .header-menu {
 .game .features-title{
   margin-top: 15px;
   margin-bottom: 10px;
-  font-family: Montserrat, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-  color: #ffffff;
 }
 
 .game .features-description{
@@ -432,6 +429,101 @@ header .header-menu {
   color: #A39CAB;
 }
 
+.game .map-row{
+  display: flex;
+}
+
+.game .map-left{
+  justify-content: flex-start;
+}
+
+.game .map-right{
+  justify-content: flex-end;
+}
+
+.game .map--left img{
+  margin-left: -40px;
+}
+
+.game .map--right img{
+  margin-right: -40px;
+}
+
+.game .map-description{
+  padding-top: 50px;
+}
+
+.game .map-description h5{
+  margin-bottom: 25px;
+}
+
+.game .map-description ul{
+  padding-left: 0;
+  list-style: none;
+}
+
+.game .map-description li{
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 18px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.game .map-description li:before{
+  position: absolute;
+  content: "";
+  display: block;
+  top: 8px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #FFDA06;
+  border-radius: 2px;
+}
+
+.key{
+  padding-right: 80px;
+}
+
+.key .section-title{
+  margin-bottom: 100px;
+}
+
 .key .section-title .selection{
   color: #FFDA07;
+}
+
+.key .key-content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.key .key-item{
+  max-width: 330px;
+  width: 100%;
+  margin-bottom: 83px;
+  padding: 34px 46px;
+  background: linear-gradient(180deg, #3A3540 0%, #2F2A34 100%);
+  border: 2px solid #FFDA06;
+  border-radius: 26.5px;
+}
+
+.key .key-item h5{
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #FFDA06;
+}
+
+.key .key-item p{
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  color: #FFFFFF;
 }
