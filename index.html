@@ -6,9 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>High core</title>
+  <link rel="stylesheet" type="text/css" href="./libs/slick-1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./fonts.css">
   <link rel="stylesheet" href="./style.css">
+  <script defer src="./libs/jQuery/jquery-3.6.0.min.js"></script>
+  <script defer type="text/javascript" src="./libs/slick-1.8.1/slick/slick.min.js"></script>
+  <script defer src="./script.js"></script>
 </head>
 
 <body>
@@ -29,14 +33,14 @@
       <header>
         <div class="header-wrapper container">
           <ul class="header-menu">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Metaverse</a></li>
-            <li><a href="#">Game</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#metaverse">Metaverse</a></li>
+            <li><a href="#game">Game</a></li>
             <li><a href="#">Video</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="#">Roadmap</a></li>
+            <li><a href="#key">Features</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
             <li><a href="#">Whitepaper</a></li>
           </ul>
           <a href="#" class="green-button">
@@ -45,7 +49,8 @@
           </a>
         </div>
       </header>
-      <section class="home">
+
+      <section class="home" id="home">
         <div class="pre-title">
           <img src="./img/face.svg" class="emoji"></img>
           More the
@@ -90,14 +95,54 @@
         </div>
       </section>
 
-      <section class="metaverse">
+      <section class="metaverse" id="metaverse">
         <h2 class="section-title">
           <span class="selection">Metaverse</span>
           in your </br>pocket!
+          <img src="./img/slider_arrow.png" alt="arrow">
         </h2>
+        <div class="metaverse-slider">
+          <div class="slide">
+            <div class="img-wrapper">
+              <img src="./img/metaverse_slide_1.png" alt="slide" class="slide-pic">
+              <img src="./img/metaverse_slide_icon1.png" alt="slide" class="slide-icon icon--bottom">
+            </div>
+            <h5 class="slide-description">
+              Reak time PVP brawler
+            </h5>
+          </div>
+          <div class="slide">
+            <div class="img-wrapper">
+              <img src="./img/metaverse_slider_2.png" alt="slide" class="slide-pic">
+              <img src="./img/metaverse_slide_icon2.png" alt="slide" class="slide-icon icon--top">
+            </div>
+            <h5 class="slide-description">
+              Reak time PVP brawler
+            </h5>
+          </div>
+
+          <div class="slide">
+            <div class="img-wrapper">
+              <img src="./img/metaverse_slide_1.png" alt="slide" class="slide-pic">
+              <img src="./img/metaverse_slide_icon1.png" alt="slide" class="slide-icon icon--bottom">
+            </div>
+            <h5 class="slide-description">
+              Reak time PVP brawler
+            </h5>
+          </div>
+          <div class="slide">
+            <div class="img-wrapper">
+              <img src="./img/metaverse_slider_2.png" alt="slide" class="slide-pic">
+              <img src="./img/metaverse_slide_icon2.png" alt="slide" class="slide-icon icon--top">
+            </div>
+            <h5 class="slide-description">
+              Reak time PVP brawler
+            </h5>
+          </div>
+        </div>
       </section>
 
-      <section class="game">
+      <section class="game" id="game">
         <div class="title-row">
           <div class="title-wrapper">
             <h2 class="section-title">
@@ -173,7 +218,47 @@
 
         </div>
 
+        <div class="slider-row">
+          <div class="tank-slider">
+            <div class="slider-item">
+              <img src="./img/tank1.png" alt="tank">
+            </div>
+
+            <div class="slider-item">
+              <img src="./img/tank2.png" alt="tank">
+            </div>
+
+            <div class="slider-item">
+              <img src="./img/tank3.png" alt="tank">
+            </div>
+
+            <div class="slider-item">
+              <img src="./img/tank4.png" alt="tank">
+            </div>
+
+            <div class="slider-item">
+              <img src="./img/tank5.png" alt="tank">
+            </div>
+
+            <div class="slider-item">
+              <img src="./img/tank6.png" alt="tank">
+            </div>
+            <div class="slider-item">
+              <img src="./img/tank1.png" alt="tank">
+            </div>
+
+            <div class="slider-item">
+              <img src="./img/tank2.png" alt="tank">
+            </div>
+
+            <div class="slider-item">
+              <img src="./img/tank3.png" alt="tank">
+            </div>
+          </div>
+        </div>
+
         <div class="map-row map--left">
+          <span class="background-light"></span>
           <div class="map">
             <img src="./img/deathmatch.png" alt="map">
           </div>
@@ -189,6 +274,7 @@
         </div>
 
         <div class="map-row map--right">
+          <!-- <span class="background-light"></span> -->
           <div class="map-description">
             <h5>Battle Royale</h5>
             <ul>
@@ -204,7 +290,7 @@
         </div>
       </section>
 
-      <section class="key">
+      <section class="key" id="key">
         <h2 class="section-title">
           Key
           <span class="selection">Features</span>
@@ -259,7 +345,7 @@
         </div>
       </section>
 
-      <section class="team">
+      <section class="team" id="team">
         <h2 class="section-title">
           Our
           <span class="selection">team</span>
@@ -361,60 +447,75 @@
         </div>
       </section>
 
-      <section class="roadmap">
+      <section class="roadmap" id="roadmap">
         <h2 class="section-title">
           Road
           <span class="selection">map</span>
         </h2>
         <div class="roadmap-content">
-         <div class="tooltip">
-           <h5>Q1 2022</h5>
-           <p>
-            Game design </br>
-            Progect Programming</br>
-            Game annoucement</br>
-            Development
-           </p>
-         </div>
-         <div class="tooltip">
-           <h5>Q1 2022</h5>
-           <p>
-            Game design </br>
-            Progect Programming</br>
-            Game annoucement</br>
-            Development
-           </p>
-         </div>
-         <div class="tooltip">
-           <h5>Q1 2022</h5>
-           <p>
-            Game design </br>
-            Progect Programming</br>
-            Game annoucement</br>
-            Development
-           </p>
-         </div>
-         <div class="tooltip">
-           <h5>Q1 2022</h5>
-           <p>
-            Game design </br>
-            Progect Programming</br>
-            Game annoucement</br>
-            Development
-           </p>
-         </div>
-         <div class="tooltip">
-           <h5>Q1 2022</h5>
-           <p>
-            Game design </br>
-            Progect Programming</br>
-            Game annoucement</br>
-            Development
-           </p>
-         </div>
+          <div class="tooltip">
+            <h5>Q1 2022</h5>
+            <p>
+              Game design </br>
+              Progect Programming</br>
+              Game annoucement</br>
+              Development
+            </p>
+          </div>
+          <div class="tooltip">
+            <h5>Q1 2022</h5>
+            <p>
+              Game design </br>
+              Progect Programming</br>
+              Game annoucement</br>
+              Development
+            </p>
+          </div>
+          <div class="tooltip">
+            <h5>Q1 2022</h5>
+            <p>
+              Game design </br>
+              Progect Programming</br>
+              Game annoucement</br>
+              Development
+            </p>
+          </div>
+          <div class="tooltip">
+            <h5>Q1 2022</h5>
+            <p>
+              Game design </br>
+              Progect Programming</br>
+              Game annoucement</br>
+              Development
+            </p>
+          </div>
+          <div class="tooltip">
+            <h5>Q1 2022</h5>
+            <p>
+              Game design </br>
+              Progect Programming</br>
+              Game annoucement</br>
+              Development
+            </p>
+          </div>
         </div>
       </section>
-        
+
+      <section class="partners" id="partners">
+        <h2 class="section-title">
+          Our
+          <span class="selection">Partners</span>
+        </h2>
+      </section>
+
+      <footer>
+        <p>© Highcore Labs LLC 2022. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">PRIVACY POLICE</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </footer>
+
     </div>
   </div>
 </body>
