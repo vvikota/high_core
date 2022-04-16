@@ -527,3 +527,155 @@ header .header-menu {
   line-height: 27px;
   color: #FFFFFF;
 }
+
+.team{
+  padding-right: 80px;
+}
+
+.team .section-title{
+  margin-bottom: 45px;
+}
+
+.team .section-title .selection{
+  color: #28C76A;
+}
+
+.team .team-content{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #3A3540;
+  border-radius: 24.2px;
+}
+
+.team .vertical-border{
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  display: block;
+  background-color: #242028;
+}
+
+.team .horizontal-border{
+  position: absolute;
+  left: 43px;
+  height: 1px;
+  width: calc(100% - 86px);
+  display: block;
+  background-color: #242028;
+}
+
+.team .horizontal--first{
+  top: 33%;
+}
+
+.team .horizontal--second{
+  top: 66%;
+}
+
+.team .dev-card{
+  display: flex;
+  width: 50%;
+  padding: 40px 40px 63px 40px;
+}
+
+.team .image-wrapper{
+  flex: 1 0 auto;
+  position: relative;
+  width: 211px;
+  height: 211px;
+  margin-right: 35px;
+  border-radius: 50%;
+  background-color: #28C76A;
+}
+
+.team .image-wrapper img{
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.team .text-wrapper{
+  padding-top: 20px;
+}
+
+.team .text-wrapper h5{
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.team .dev-position{
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 33px;
+  color: #28C76A;
+}
+
+.team .dev-info{
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #A39CAB;
+}
+
+.roadmap .section-title .selection{
+  margin-left: -25px;
+  color: #FF6375;
+} 
+
+.roadmap .roadmap-content{
+  position: relative;
+  width: 100%;
+  height: 870px;
+  margin-top: -110px;
+  background: url("./img/roadmap.png") no-repeat 0px 175px,
+              url("./img/roadmap_girl.png") no-repeat 50% 0;
+}
+
+.roadmap .tooltip{
+  position: absolute;
+  width: 214px;
+  height: 185px;
+  padding: 23px 30px;
+  background: url("./img/tooltip.svg") no-repeat;
+  z-index: 1;
+}
+
+.roadmap .tooltip h5{
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.roadmap .tooltip p{
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19.5px;
+  color: #FFFFFF;
+}
+
+.roadmap .tooltip:nth-child(1){
+  top: 235px;
+  left: 715px;
+}
+.roadmap .tooltip:nth-child(2){
+  top: 235px;
+  left: 315px;
+}
+.roadmap .tooltip:nth-child(3){
+  top: 430px;
+  left: 870px;
+}
+.roadmap .tooltip:nth-child(4){
+  top: 495px;
+  left: 520px;
+}
+.roadmap .tooltip:nth-child(5){
+  top: 530px;
+  left: 145px;
+}
