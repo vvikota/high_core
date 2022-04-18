@@ -1,7 +1,11 @@
 $(document).ready(function () {
-  // header scroll
+  // header menu actions
   $("body").on("click", '[href*="#"]', function (e) {
-    const fixed_offset = 100
+    const fixed_offset = 100;
+
+    $(".header-menu li").removeClass("active");
+    $(e.target).parent().addClass("active");
+
     $("html,body")
       .stop()
       .animate(
@@ -11,10 +15,41 @@ $(document).ready(function () {
           easing: "swing",
         }
       )
+
     e.preventDefault()
   })
 
-  // metaverse slider
+  var lastId,
+    topMenu = $(".header-menu"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    menuItems = topMenu.find("a"),
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+  $(window).scroll(function(){
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+    var cur = scrollItems.map(function() {
+      if ($(this).offset().top < fromTop)
+        return this;
+    });
+
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+    
+    if (lastId !== id) {
+        lastId = id;
+
+        menuItems
+          .parent().removeClass("active")
+          .end().filter("[href='#"+id+"']").parent().addClass("active");
+    }                   
+ });
+
+
+
+  // metaverse slider  
   $(".metaverse-slider").slick({
     variableWidth: true,
     infinite: false,
