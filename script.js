@@ -51,16 +51,30 @@ $(document).ready(function () {
     infinite: false,
   })
 
+  $(".metaverse-slider").on(
+    "afterChange",
+    function (event, slick, currentSlide, nextSlide) {
+      if(currentSlide > 0){
+        $(".metaverse .metaverse-slider .slick-prev").addClass("show");
+      } else if(currentSlide === 0){
+        $(".metaverse .metaverse-slider .slick-prev").removeClass("show");
+      } 
+      // else if (currentSlide === slick.slideCount - 1){
+      //   $(".metaverse-slider").slick("slickGoTo", "0")
+      // }
+
+      // console.log(slick.slideCount, currentSlide)
+    }
+  )
+
   // tanks slider
   $(".tank-slider").slick({
     slidesToShow: 6,
     arrows: false,
+    cssEase: "linear",
     autoplay: true,
-    autoplaySpeed: 2000,
-    dots: true,
-    customPaging: function (slick, index) {
-      return "<span></span>"
-    },
+    autoplaySpeed: 0,
+    speed: 3000,
   })
 
   // partners slider
@@ -94,8 +108,4 @@ $(document).ready(function () {
       $(".video-wrapper video")[0].play()
     }
   })
-
-  // $('.metaverse-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  //   console.log(nextSlide);
-  // });
 })

@@ -54,7 +54,6 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  border: 1px solid green;
 }
 
 .container {
@@ -69,12 +68,11 @@ body {
 .page-content {
   width: 100%;
   padding-left: 106px;
-  background:
-    linear-gradient(transparent, #242028),
-    url("./img/main_smoke.png"),
+  background: linear-gradient(transparent, #242028 70%),
+    linear-gradient(to right, #242028, transparent), url("./img/main_smoke.png"),
     url("./img/home_background.svg");
-  background-position: 0 790px, 0 0, 100% 0;
-  background-size: 100% 265px, 100%, 74%;
+  background-position: 0 790px, 0 100px, 0 0, 100% 0;
+  background-size: 100% 265px, 180px 1000px, 100%, 74%;
   background-repeat: no-repeat;
 }
 
@@ -91,7 +89,7 @@ body {
   -ms-flex-align: center;
   align-items: center;
   justify-content: flex-end;
-  width: 106px;
+  width: 107px;
   height: 100vh;
   padding-top: 33px;
   border-right: 1px solid #000000;
@@ -160,7 +158,9 @@ body {
 
 header {
   position: fixed;
-  left: 0;
+  max-width: 1440px;
+  left: 50%;
+  transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,10 +426,16 @@ header .header-menu {
 }
 
 .metaverse .metaverse-slider .slick-prev {
-  display: none !important;
+  opacity: 0 !important;
+  transition: all 0.5s ease-out;
 }
 
-.metaverse .metaverse-slider .slick-next {
+.metaverse .metaverse-slider .slick-prev.show {
+  opacity: 1 !important;
+}
+
+.metaverse .metaverse-slider .slick-next,
+.metaverse .metaverse-slider .slick-prev{
   position: absolute;
   top: 35%;
   left: 83%;
@@ -443,6 +449,12 @@ header .header-menu {
   background-image: url("./img/Vector.svg");
   background-repeat: no-repeat;
   background-position: 33px 32px;
+}
+
+.metaverse .metaverse-slider .slick-prev{
+  left: -7%;
+  transform: rotate(180deg);
+  z-index: 10;
 }
 
 .metaverse .slick-track {
@@ -681,39 +693,6 @@ header .header-menu {
   border-radius: 24.537px;
 }
 
-.game .slider-row .slider-item.slick-current {
-  background: url("./img/active_tank_slide.png") -25px -25px no-repeat,
-    -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
-  background: url("./img/active_tank_slide.png") -25px -25px no-repeat,
-    -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: url("./img/active_tank_slide.png") -25px -25px no-repeat,
-    linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
-}
-
-.game .slider-row .slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 30px;
-}
-
-.game .slider-row .slick-dots span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  margin-right: 9px;
-  background-color: #545454;
-  border-radius: 15px;
-  -webkit-transition: 0.3s ease width;
-  -o-transition: 0.3s ease width;
-  transition: 0.3s ease width;
-}
-
-.game .slider-row .slick-dots .slick-active span {
-  width: 60px;
-  background-color: #ffda06;
-}
-
 .game .map-row {
   position: relative;
   display: -webkit-box;
@@ -865,7 +844,14 @@ header .header-menu {
 .key {
   margin-top: 140px;
   padding-top: 25px;
-  background: url("./img/key_features_background.png") no-repeat;
+  background: linear-gradient(#242028, transparent),
+    linear-gradient(to right,transparent, #242028),
+    linear-gradient( transparent, #242028),
+    linear-gradient(to right, #242028, transparent),
+    url("./img/key_features_background.png");
+  background-position: 0 0, 100% 0, 0 92%, 0 0, 0 0;
+  background-size: 100% 100px, 100px 1200px, 100% 100px, 100px 1200px, 100%;
+  background-repeat: no-repeat;
 }
 
 .key .section-title {
