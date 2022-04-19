@@ -428,14 +428,16 @@ header .header-menu {
 .metaverse .metaverse-slider .slick-prev {
   opacity: 0 !important;
   transition: all 0.5s ease-out;
+  pointer-events: none;
 }
 
 .metaverse .metaverse-slider .slick-prev.show {
   opacity: 1 !important;
+  pointer-events: auto;
 }
 
 .metaverse .metaverse-slider .slick-next,
-.metaverse .metaverse-slider .slick-prev{
+.metaverse .metaverse-slider .slick-prev {
   position: absolute;
   top: 35%;
   left: 83%;
@@ -451,7 +453,7 @@ header .header-menu {
   background-position: 33px 32px;
 }
 
-.metaverse .metaverse-slider .slick-prev{
+.metaverse .metaverse-slider .slick-prev {
   left: -7%;
   transform: rotate(180deg);
   z-index: 10;
@@ -845,8 +847,8 @@ header .header-menu {
   margin-top: 140px;
   padding-top: 25px;
   background: linear-gradient(#242028, transparent),
-    linear-gradient(to right,transparent, #242028),
-    linear-gradient( transparent, #242028),
+    linear-gradient(to right, transparent, #242028),
+    linear-gradient(transparent, #242028),
     linear-gradient(to right, #242028, transparent),
     url("./img/key_features_background.png");
   background-position: 0 0, 100% 0, 0 92%, 0 0, 0 0;

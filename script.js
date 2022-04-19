@@ -49,6 +49,7 @@ $(document).ready(function () {
   $(".metaverse-slider").slick({
     variableWidth: true,
     infinite: false,
+    infinite: true,
   })
 
   $(".metaverse-slider").on(
@@ -59,11 +60,6 @@ $(document).ready(function () {
       } else if(currentSlide === 0){
         $(".metaverse .metaverse-slider .slick-prev").removeClass("show");
       } 
-      // else if (currentSlide === slick.slideCount - 1){
-      //   $(".metaverse-slider").slick("slickGoTo", "0")
-      // }
-
-      // console.log(slick.slideCount, currentSlide)
     }
   )
 
