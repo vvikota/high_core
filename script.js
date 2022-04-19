@@ -55,13 +55,27 @@ $(document).ready(function () {
   $(".metaverse-slider").on(
     "afterChange",
     function (event, slick, currentSlide, nextSlide) {
-      if(currentSlide > 0){
-        $(".metaverse .metaverse-slider .slick-prev").addClass("show");
-      } else if(currentSlide === 0){
-        $(".metaverse .metaverse-slider .slick-prev").removeClass("show");
-      } 
+      if (currentSlide > 0) {
+        $(".metaverse .metaverse-slider .slick-prev").addClass("show")
+      } else if (currentSlide === 0) {
+        $(".metaverse .metaverse-slider .slick-prev").removeClass("show")
+      }
     }
   )
+
+  function setMaxHeight() {
+    let els = document.querySelectorAll(".metaverse .metaverse-slider .slide"),
+      arr = []
+    for (let i = 0; i < els.length; i++) {
+      arr.push({ height: els[i].clientHeight })
+    }
+    let elsMaxHeight = Math.max(...arr.map((o) => o.height))
+    for (let i = 0; i < els.length; i++) {
+      els[i].style.height = elsMaxHeight + "px";
+    }
+  }
+  
+  setMaxHeight()
 
   // tanks slider
   $(".tank-slider").slick({
