@@ -56,12 +56,11 @@ $(document).ready(function () {
     for (let i = 0; i < els.length; i++) {
       els[i].style.height = elsMaxHeight + "px"
     }
-  };
-  
-  $('.metaverse-slider').on('init', function(event, slick){
-    console.log("initialized")
-    setMaxHeight();
-  });
+  }
+
+  $(".metaverse-slider").on("init", function (event, slick) {
+    setMaxHeight()
+  })
 
   $(".metaverse-slider").slick({
     variableWidth: true,
@@ -124,4 +123,22 @@ $(document).ready(function () {
       $(".video-wrapper video")[0].play()
     }
   })
+
+  function videoResize() {
+    const windowWidth = $(window).width();
+    const contentWidth = $(".wrapper").width();
+    const asideWidth = $(".aside").width();
+    const videoSectionHeight = $(".video").outerHeight();
+    const videoContentHeight = windowWidth / 1000 * 568;
+    const heightBias = videoSectionHeight - (videoSectionHeight - 215) / 2
+
+    const bias = (windowWidth - contentWidth) / 2 + asideWidth
+    $(".video-wrapper").width(windowWidth)
+
+    $(".video-wrapper").css("left", "-" + bias + "px");
+
+    $(".video").outerHeight(heightBias + videoContentHeight)
+  }
+
+  $(window).on("load resize", videoResize)
 })
