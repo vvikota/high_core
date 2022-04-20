@@ -44,7 +44,10 @@ h5 {
 }
 
 body {
-  background-color: #242028;
+  background:  url("./img/home_background.svg") #242028;
+  background-position: 600px -20px;
+  background-size: 1170px 987px;
+  background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -68,12 +71,6 @@ body {
 .page-content {
   width: 100%;
   padding-left: 106px;
-  background: linear-gradient(transparent, #242028 70%),
-    linear-gradient(to right, #242028, transparent), url("./img/main_smoke.png"),
-    url("./img/home_background.svg");
-  background-position: 0 790px, 0 100px, 0 0, 100% 0;
-  background-size: 100% 265px, 180px 1000px, 100%, 74%;
-  background-repeat: no-repeat;
 }
 
 .aside {
@@ -214,6 +211,38 @@ header .header-menu {
 
 .header-menu li.active a:after {
   width: 100%;
+}
+
+.home{
+  position: relative;
+}
+
+.home:after {
+  position: absolute;
+  content: "";
+  top: 300px;
+  left: 23%;
+  display: block;
+  width: 100px;
+  height: 1;
+  box-shadow: 0 0 120px 90px rgba(159, 135, 138, 0.4);
+  z-index: 1;
+  border-radius: 50%;
+  background-color: rgba(159, 135, 138, 0.4);
+}
+
+.home:before {
+  position: absolute;
+  content: "";
+  top: 50px;
+  left: 10%;
+  display: block;
+  width: 100px;
+  height: 1;
+  box-shadow: 0 0 100px 25px rgba(109, 92, 146, 1);
+  z-index: 1;
+  border-radius: 50%;
+  background-color: rgba(109, 92, 146, 1);
 }
 
 .home .pre-title {
@@ -480,9 +509,9 @@ header .header-menu {
   -webkit-transform: rotate(6.2deg);
   -ms-transform: rotate(6.2deg);
   transform: rotate(6.2deg);
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .metaverse .slide.rotate .img-wrapper .slide-pic {
@@ -1172,9 +1201,9 @@ header .header-menu {
   margin-right: 9px;
   background-color: #545454;
   border-radius: 15px;
-  -webkit-transition: 0.3s ease width;
-  -o-transition: 0.3s ease width;
-  transition: 0.3s ease width;
+  -webkit-transition: 0.5s ease width;
+  -o-transition: 0.5s ease width;
+  transition: 0.5s ease width;
 }
 
 .partners .partners-slider .slick-dots .slick-active span {

@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  
+
   // header menu actions
   var lastId,
     topMenu = $(".header-menu"),
@@ -44,6 +46,19 @@ $(document).ready(function () {
         .addClass("active")
     }
   })
+
+  // main background
+  function changeBackgroundPosition() {
+    const windowWidth = $(window).width();
+    
+    const backgroundWidth = 1170;
+    const backgroundPosition = (windowWidth / 2) - (backgroundWidth / 100 * 20);
+
+    $("body").css("background-position", backgroundPosition + "px -20px");
+
+  }
+  
+  $(window).on("load resize", changeBackgroundPosition);
 
   // metaverse slider
   function setMaxHeight() {
@@ -125,19 +140,18 @@ $(document).ready(function () {
   })
 
   function videoResize() {
-    const windowWidth = $(window).width();
-    const contentWidth = $(".wrapper").width();
-    const asideWidth = $(".aside").width();
-    const videoSectionHeight = $(".video").outerHeight();
-    const videoContentHeight = windowWidth / 1000 * 568;
-    const heightBias = videoSectionHeight - (videoSectionHeight - 215) / 2
+    const windowWidth = $(window).width()
+    const contentWidth = $(".wrapper").width()
+    const asideWidth = $(".aside").width()
+    const videoSectionHeight = $(".video p").height()
+    const videoContentHeight = (windowWidth / 1000) * 568
 
     const bias = (windowWidth - contentWidth) / 2 + asideWidth
     $(".video-wrapper").width(windowWidth)
 
-    $(".video-wrapper").css("left", "-" + bias + "px");
+    $(".video-wrapper").css("left", "-" + bias + "px")
 
-    $(".video").outerHeight(heightBias + videoContentHeight)
+    $(".video").outerHeight(videoSectionHeight + videoContentHeight + 100)
   }
 
   $(window).on("load resize", videoResize)
