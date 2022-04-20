@@ -46,6 +46,23 @@ $(document).ready(function () {
   })
 
   // metaverse slider
+  function setMaxHeight() {
+    let els = document.querySelectorAll(".metaverse .metaverse-slider .slide"),
+      arr = []
+    for (let i = 0; i < els.length; i++) {
+      arr.push({ height: els[i].clientHeight })
+    }
+    let elsMaxHeight = Math.max(...arr.map((o) => o.height))
+    for (let i = 0; i < els.length; i++) {
+      els[i].style.height = elsMaxHeight + "px"
+    }
+  };
+  
+  $('.metaverse-slider').on('init', function(event, slick){
+    console.log("initialized")
+    setMaxHeight();
+  });
+
   $(".metaverse-slider").slick({
     variableWidth: true,
     infinite: false,
@@ -60,22 +77,11 @@ $(document).ready(function () {
       } else if (currentSlide === 0) {
         $(".metaverse .metaverse-slider .slick-prev").removeClass("show")
       }
+
+      $(".slick-slide").removeClass("rotate")
+      $(".slick-current").addClass("rotate")
     }
   )
-
-  function setMaxHeight() {
-    let els = document.querySelectorAll(".metaverse .metaverse-slider .slide"),
-      arr = []
-    for (let i = 0; i < els.length; i++) {
-      arr.push({ height: els[i].clientHeight })
-    }
-    let elsMaxHeight = Math.max(...arr.map((o) => o.height))
-    for (let i = 0; i < els.length; i++) {
-      els[i].style.height = elsMaxHeight + "px";
-    }
-  }
-  
-  setMaxHeight()
 
   // tanks slider
   $(".tank-slider").slick({

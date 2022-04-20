@@ -491,7 +491,7 @@ header .header-menu {
   transition: all 0.5s ease-out;
 }
 
-.metaverse .slide.slick-current .img-wrapper .slide-pic {
+.metaverse .slide.rotate .img-wrapper .slide-pic {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
