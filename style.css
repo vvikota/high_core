@@ -85,11 +85,16 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  justify-content: flex-end;
-  width: 107px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 108px;
   height: 100vh;
   padding-top: 33px;
+  border-left: 1px solid #000000;
   border-right: 1px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .logo {
@@ -98,15 +103,22 @@ body {
   margin-left: 28px;
 }
 
+.logo:before,
 .logo:after {
   position: absolute;
   content: "";
   display: block;
   top: -35px;
-  left: 78px;
   width: 1px;
   height: 103px;
   background-color: #000000;
+}
+.logo:after {
+  left: 79px;
+}
+
+.logo:before {
+  left: -28px;
 }
 
 .logo p {
@@ -143,17 +155,23 @@ body {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 100%;
   padding-top: 33px;
   padding-bottom: 22px;
   border-bottom: 1px solid #000000;
   z-index: 5;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);backdrop-filter: blur(10px);
   background-color: rgba(36, 32, 40, 0.5);
 }
 
@@ -225,7 +243,8 @@ header .header-menu {
   display: block;
   width: 100px;
   height: 1;
-  box-shadow: 0 0 120px 90px rgba(159, 135, 138, 0.4);
+  -webkit-box-shadow: 0 0 120px 90px rgba(159, 135, 138, 0.4);
+          box-shadow: 0 0 120px 90px rgba(159, 135, 138, 0.4);
   z-index: 1;
   border-radius: 50%;
   background-color: rgba(159, 135, 138, 0.4);
@@ -239,7 +258,8 @@ header .header-menu {
   display: block;
   width: 100px;
   height: 1;
-  box-shadow: 0 0 100px 25px rgba(109, 92, 146, 1);
+  -webkit-box-shadow: 0 0 100px 25px rgba(109, 92, 146, 1);
+          box-shadow: 0 0 100px 25px rgba(109, 92, 146, 1);
   z-index: 1;
   border-radius: 50%;
   background-color: rgba(109, 92, 146, 1);
@@ -336,14 +356,8 @@ header .header-menu {
   -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 553px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3a3540),
-    to(#2f2a34)
-  );
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 10px;
 }
@@ -443,13 +457,20 @@ header .header-menu {
   color: #ff6376;
 }
 
-.metaverse .metaverse-slider {
+.metaverse .slider-wrapper{
   position: relative;
+  height: 500px;
+}
+
+.metaverse .metaverse-slider {
+  position: absolute;
   z-index: 2;
 }
 
 .metaverse .metaverse-slider .slick-prev {
   opacity: 0 !important;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
   pointer-events: none;
 }
@@ -464,21 +485,22 @@ header .header-menu {
   position: absolute;
   top: 35%;
   left: 83%;
-  width: 83px;
-  height: 83px;
+  width: 85px;
+  height: 87px;
   padding: 0;
   font-size: 0;
-  border-radius: 50%;
-  border: none;
-  background-color: #ffffff;
-  background-image: url("./img/Vector.svg");
+  background-image: url("./img/slider_button.svg");
+  background-position: 2px 2px;
   background-repeat: no-repeat;
-  background-position: 33px 32px;
+  border: none;
+  background-color: transparent;
 }
 
 .metaverse .metaverse-slider .slick-prev {
   left: -7%;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
   z-index: 10;
 }
 
@@ -493,9 +515,16 @@ header .header-menu {
 }
 
 .metaverse .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -566,14 +595,9 @@ header .header-menu {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   max-width: 498px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3a3540),
-    to(#2f2a34)
-  );
+  width: 100%;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 10px;
 }
@@ -709,14 +733,8 @@ header .header-menu {
   width: 190px;
   height: 270px;
   margin-right: 5px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3a3540),
-    to(#2f2a34)
-  );
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 24.537px;
 }
@@ -822,9 +840,16 @@ header .header-menu {
   position: relative;
   padding-top: 115px;
   padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .video .video-wrapper {
@@ -841,14 +866,8 @@ header .header-menu {
   top: 20%;
   left: 0;
   z-index: 2;
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#242028),
-    to(transparent)
-  );
   background: -o-linear-gradient(bottom, #242028, transparent);
+  background: -webkit-gradient(linear, left bottom, left top, from(#242028), to(transparent));
   background: linear-gradient(0deg, #242028, transparent);
 }
 
@@ -874,6 +893,16 @@ header .header-menu {
 .key {
   margin-top: 140px;
   padding-top: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#242028), to(transparent)),
+    -webkit-gradient(linear, left top, right top, from(transparent), to(#242028)),
+    -webkit-gradient(linear, left top, left bottom, from(transparent), to(#242028)),
+    -webkit-gradient(linear, left top, right top, from(#242028), to(transparent)),
+    url("./img/key_features_background.png");
+  background: -o-linear-gradient(#242028, transparent),
+    -o-linear-gradient(left, transparent, #242028),
+    -o-linear-gradient(transparent, #242028),
+    -o-linear-gradient(left, #242028, transparent),
+    url("./img/key_features_background.png");
   background: linear-gradient(#242028, transparent),
     linear-gradient(to right, transparent, #242028),
     linear-gradient(transparent, #242028),
@@ -907,14 +936,8 @@ header .header-menu {
   max-width: 330px;
   width: 100%;
   padding: 34px 46px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3a3540),
-    to(#2f2a34)
-  );
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border: 2px solid #ffda06;
   border-radius: 26.5px;

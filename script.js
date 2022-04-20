@@ -1,6 +1,10 @@
-$(document).ready(function () {
-  
+// width >= 1440
+const variables = {
+  leftContentPadding: 80,
+  asideWidth: 106
+}
 
+$(document).ready(function () {
   // header menu actions
   var lastId,
     topMenu = $(".header-menu"),
@@ -49,16 +53,15 @@ $(document).ready(function () {
 
   // main background
   function changeBackgroundPosition() {
-    const windowWidth = $(window).width();
-    
-    const backgroundWidth = 1170;
-    const backgroundPosition = (windowWidth / 2) - (backgroundWidth / 100 * 20);
+    const windowWidth = $(window).width()
 
-    $("body").css("background-position", backgroundPosition + "px -20px");
+    const backgroundWidth = 1170
+    const backgroundPosition = windowWidth / 2 - (backgroundWidth / 100) * 20
 
+    $("body").css("background-position", backgroundPosition + "px -20px")
   }
-  
-  $(window).on("load resize", changeBackgroundPosition);
+
+  $(window).on("load resize", changeBackgroundPosition)
 
   // metaverse slider
   function setMaxHeight() {
@@ -71,7 +74,25 @@ $(document).ready(function () {
     for (let i = 0; i < els.length; i++) {
       els[i].style.height = elsMaxHeight + "px"
     }
+
+    return elsMaxHeight
   }
+
+  function changeSliderWidth() {
+    const windowWidth = $(window).width()
+    const contentWidth = $(".wrapper").width()
+
+    const sliderWidthBias = (windowWidth - contentWidth) / 2
+    const sliderWidth = windowWidth - sliderWidthBias - 80 - 106
+    const nextArrowPosition = contentWidth - 370
+    console.log(nextArrowPosition)
+
+    $(".metaverse-slider").width(sliderWidth)
+    $(".metaverse .slider-wrapper").height(setMaxHeight())
+    $(".metaverse-slider .slick-next").css("left", nextArrowPosition + "px")
+  }
+
+  $(window).on("load resize", changeSliderWidth)
 
   $(".metaverse-slider").on("init", function (event, slick) {
     setMaxHeight()
