@@ -48,6 +48,7 @@ body {
   background-position: 600px -20px;
   background-size: 1170px 987px;
   background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -479,6 +480,10 @@ header .header-menu {
   z-index: 2;
 }
 
+.metaverse .metaverse-slider .slick-list{
+  overflow: inherit !important;
+}
+
 .metaverse .metaverse-slider .slick-prev {
   opacity: 0 !important;
   -webkit-transition: all 0.5s ease-out;
@@ -509,11 +514,16 @@ header .header-menu {
 }
 
 .metaverse .metaverse-slider .slick-prev {
-  left: -7%;
+  left: -5%;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
   z-index: 10;
+}
+
+.metaverse button.first-slide{
+  position: absolute;
+  z-index: 5;
 }
 
 .metaverse .slick-track {
@@ -1191,59 +1201,28 @@ header .header-menu {
   color: #fcdb3f;
 }
 
-.partners .partners-slider {
+.partners .partners-content {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
   background-color: #3a3540;
   border-radius: 26px;
 }
 
-.partners .partners-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.partners .partners-slide .partner-wrapper:first-child {
-  border-bottom: 1px solid #242028;
-}
-
 .partners .partner-wrapper {
+  width: 33.333%;
   padding: 88px 118px;
   font-family: Gilroy, sans-serif;
   font-size: 64px;
   font-weight: 700;
   line-height: 72px;
   color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid #242028;
+}
+
+.partners .partner-wrapper:nth-child(3n + 1),
+.partners .partner-wrapper:nth-child(3n + 2) {
   border-right: 1px solid #242028;
-}
-
-.partners .partners-slider .slick-dots {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 30px;
-}
-
-.partners .partners-slider .slick-dots span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  margin-right: 9px;
-  background-color: #545454;
-  border-radius: 15px;
-  -webkit-transition: 0.5s ease width;
-  -o-transition: 0.5s ease width;
-  transition: 0.5s ease width;
-}
-
-.partners .partners-slider .slick-dots .slick-active span {
-  width: 60px;
-  background-color: #ffda06;
 }
 
 footer {

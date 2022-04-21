@@ -1,7 +1,7 @@
 // width >= 1440
 const variables = {
   leftContentPadding: 80,
-  asideWidth: 106
+  asideWidth: 106,
 }
 
 $(document).ready(function () {
@@ -81,15 +81,20 @@ $(document).ready(function () {
   function changeSliderWidth() {
     const windowWidth = $(window).width()
     const contentWidth = $(".wrapper").width()
+    const asideWidth = $(".aside").width()
 
-    const sliderWidthBias = (windowWidth - contentWidth) / 2
-    const sliderWidth = windowWidth - sliderWidthBias - 80 - 106
+    const bias =
+      (windowWidth - contentWidth) / 2 + asideWidth + variables.asideWidth
+    // const sliderWidthBias = (windowWidth - contentWidth) / 2
+    // const sliderWidth = windowWidth - sliderWidthBias - 80 - 106
     const nextArrowPosition = contentWidth - 370
-    console.log(nextArrowPosition)
+    // console.log(nextArrowPosition)
 
-    $(".metaverse-slider").width(sliderWidth)
+    $(".metaverse-slider").width(windowWidth + 26)
+    $(".metaverse-slider").css("left", "0px")
     $(".metaverse .slider-wrapper").height(setMaxHeight())
     $(".metaverse-slider .slick-next").css("left", nextArrowPosition + "px")
+    $(".metaverse button.first-slide").css("left", nextArrowPosition + "px")
   }
 
   $(window).on("load resize", changeSliderWidth)
@@ -100,8 +105,8 @@ $(document).ready(function () {
 
   $(".metaverse-slider").slick({
     variableWidth: true,
-    infinite: false,
     infinite: true,
+    // centerMode: true,
   })
 
   $(".metaverse-slider").on(
@@ -118,6 +123,11 @@ $(document).ready(function () {
     }
   )
 
+  $("button.first-slide").click(function (e) {
+    $(".metaverse-slider").slick("slickGoTo", 0)
+  })
+
+
   // tanks slider
   $(".tank-slider").slick({
     slidesToShow: 6,
@@ -126,18 +136,6 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 0,
     speed: 3000,
-  })
-
-  // partners slider
-  $(".partners-slider").slick({
-    slidesToShow: 3,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    dots: true,
-    customPaging: function (slick, index) {
-      return "<span></span>"
-    },
   })
 
   // map animation
