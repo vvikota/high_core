@@ -51,18 +51,6 @@ $(document).ready(function () {
     }
   })
 
-  // main background
-  function changeBackgroundPosition() {
-    const windowWidth = $(window).width()
-
-    const backgroundWidth = 1170
-    const backgroundPosition = windowWidth / 2 - (backgroundWidth / 100) * 20
-
-    $("body").css("background-position", backgroundPosition + "px -20px")
-  }
-
-  $(window).on("load resize", changeBackgroundPosition)
-
   // metaverse slider
   function setMaxHeight() {
     let els = document.querySelectorAll(".metaverse .metaverse-slider .slide"),
@@ -81,14 +69,7 @@ $(document).ready(function () {
   function changeSliderWidth() {
     const windowWidth = $(window).width()
     const contentWidth = $(".wrapper").width()
-    const asideWidth = $(".aside").width()
-
-    const bias =
-      (windowWidth - contentWidth) / 2 + asideWidth + variables.asideWidth
-    // const sliderWidthBias = (windowWidth - contentWidth) / 2
-    // const sliderWidth = windowWidth - sliderWidthBias - 80 - 106
     const nextArrowPosition = contentWidth - 370
-    // console.log(nextArrowPosition)
 
     $(".metaverse-slider").width(windowWidth + 26)
     $(".metaverse-slider").css("left", "0px")
@@ -97,16 +78,17 @@ $(document).ready(function () {
     $(".metaverse button.first-slide").css("left", nextArrowPosition + "px")
   }
 
-  $(window).on("load resize", changeSliderWidth)
+  $(window).on("resize", changeSliderWidth)
 
   $(".metaverse-slider").on("init", function (event, slick) {
-    setMaxHeight()
+    setMaxHeight();
+    changeSliderWidth();
+    ;
   })
 
   $(".metaverse-slider").slick({
     variableWidth: true,
     infinite: true,
-    // centerMode: true,
   })
 
   $(".metaverse-slider").on(
@@ -173,5 +155,7 @@ $(document).ready(function () {
     $(".video").outerHeight(videoSectionHeight + videoContentHeight + 100)
   }
 
-  $(window).on("load resize", videoResize)
+  videoResize()
+
+  $(window).on("resize", videoResize)
 })

@@ -45,10 +45,85 @@ h5 {
 
 body {
   background:  url("./img/home_background.svg") #242028;
-  background-position: 600px -20px;
   background-size: 1170px 987px;
   background-repeat: no-repeat;
   overflow-x: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+@media(min-width: 2600px){
+  body {
+    background-position: 100% -20px;
+  }
+}
+@media(max-width: 2600px){
+  body {
+    background-position: 1120px -20px;
+  }
+}
+@media(max-width: 2450px){
+  body {
+    background-position: 1050px -20px;
+  }
+}
+@media(max-width: 2300px){
+  body {
+    background-position: 950px -20px;
+  }
+}
+@media(max-width: 2150px){
+  body {
+    background-position: 850px -20px;
+  }
+}
+
+@media(max-width: 2000px){
+  body {
+    background-position: 780px -20px;
+  }
+}
+
+@media(max-width: 1820px){
+  body {
+    background-position: 680px -20px;
+  }
+}
+
+@media(max-width: 1740px){
+  body {
+    background-position: 650px -20px;
+  }
+}
+
+@media(max-width: 1640px){
+  body {
+    background-position: 620px -20px;
+  }
+}
+
+@media(max-width: 1620px){
+  body {
+    background-position: 600px -20px;
+  }
+}
+
+@media(max-width: 1580px){
+  body {
+    background-position: 580px -20px;
+  }
+}
+
+@media(max-width: 1520px){
+  body {
+    background-position: 560px -20px;
+  }
+}
+
+@media(max-width: 1480px){
+  body {
+    background-position: 540px -20px;
+  }
 }
 
 .wrapper {
@@ -58,6 +133,7 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  border-right: 1px solid red;
 }
 
 .container {
@@ -895,6 +971,7 @@ header .header-menu {
 
 .video .video-wrapper video {
   width: 100%;
+  object-fit: cover;
 }
 
 .video p {
@@ -915,23 +992,9 @@ header .header-menu {
 .key {
   margin-top: 140px;
   padding-top: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#242028), to(transparent)),
-    -webkit-gradient(linear, left top, right top, from(transparent), to(#242028)),
-    -webkit-gradient(linear, left top, left bottom, from(transparent), to(#242028)),
-    -webkit-gradient(linear, left top, right top, from(#242028), to(transparent)),
-    url("./img/key_features_background.png");
-  background: -o-linear-gradient(#242028, transparent),
-    -o-linear-gradient(left, transparent, #242028),
-    -o-linear-gradient(transparent, #242028),
-    -o-linear-gradient(left, #242028, transparent),
-    url("./img/key_features_background.png");
-  background: linear-gradient(#242028, transparent),
-    linear-gradient(to right, transparent, #242028),
-    linear-gradient(transparent, #242028),
-    linear-gradient(to right, #242028, transparent),
-    url("./img/key_features_background.png");
-  background-position: 0 0, 100% 0, 0 92%, 0 0, 0 0;
-  background-size: 100% 100px, 100px 1200px, 100% 100px, 100px 1200px, 100%;
+  background: url("./img/key_features_background.png");
+  background-position: -50px 50px;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
