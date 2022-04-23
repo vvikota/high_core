@@ -314,7 +314,8 @@ header .header-menu {
   margin-bottom: 8px;
 }
 
-.home .section-title .selection {
+.home .section-title .selection,
+.home .description .selection {
   color: #ffda06;
 }
 
