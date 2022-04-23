@@ -44,86 +44,8 @@ h5 {
 }
 
 body {
-  background:  url("./img/home_background.svg") #242028;
-  background-size: 1170px 987px;
-  background-repeat: no-repeat;
+  background:#242028;
   overflow-x: hidden;
-  position: relative;
-  z-index: 2;
-}
-
-@media(min-width: 2600px){
-  body {
-    background-position: 100% -20px;
-  }
-}
-@media(max-width: 2600px){
-  body {
-    background-position: 1120px -20px;
-  }
-}
-@media(max-width: 2450px){
-  body {
-    background-position: 1050px -20px;
-  }
-}
-@media(max-width: 2300px){
-  body {
-    background-position: 950px -20px;
-  }
-}
-@media(max-width: 2150px){
-  body {
-    background-position: 850px -20px;
-  }
-}
-
-@media(max-width: 2000px){
-  body {
-    background-position: 780px -20px;
-  }
-}
-
-@media(max-width: 1820px){
-  body {
-    background-position: 680px -20px;
-  }
-}
-
-@media(max-width: 1740px){
-  body {
-    background-position: 650px -20px;
-  }
-}
-
-@media(max-width: 1640px){
-  body {
-    background-position: 620px -20px;
-  }
-}
-
-@media(max-width: 1620px){
-  body {
-    background-position: 600px -20px;
-  }
-}
-
-@media(max-width: 1580px){
-  body {
-    background-position: 580px -20px;
-  }
-}
-
-@media(max-width: 1520px){
-  body {
-    background-position: 560px -20px;
-  }
-}
-
-@media(max-width: 1480px){
-  body {
-    background-position: 540px -20px;
-  }
 }
 
 .wrapper {
@@ -133,6 +55,13 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
+}
+
+.main-background{
+  position: absolute;
+  top: 20px;
+  left: 37%;
 }
 
 .container {
