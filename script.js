@@ -73,22 +73,26 @@ $(document).ready(function () {
 
     $(".metaverse-slider").width(windowWidth + 26)
     $(".metaverse-slider").css("left", "0px")
-    $(".metaverse .slider-wrapper").height(setMaxHeight())
     $(".metaverse-slider .slick-next").css("left", nextArrowPosition + "px")
     $(".metaverse button.first-slide").css("left", nextArrowPosition + "px")
   }
 
-  $(window).on("resize", changeSliderWidth)
+  changeSliderWidth()
 
+  $(window).on("resize", changeSliderWidth)
+  
   $(".metaverse-slider").on("init", function (event, slick) {
-    setMaxHeight();
-    changeSliderWidth();
-    ;
+    changeSliderWidth()
+  })
+  
+  $(".metaverse-slider").imagesLoaded(function () {
+    $(".metaverse .slider-wrapper").height(setMaxHeight())
   })
 
   $(".metaverse-slider").slick({
     variableWidth: true,
     infinite: true,
+    lazyLoad: "ondemand",
   })
 
   $(".metaverse-slider").on(
@@ -109,15 +113,15 @@ $(document).ready(function () {
     $(".metaverse-slider").slick("slickGoTo", 0)
   })
 
-
   // tanks slider
   $(".tank-slider").slick({
-    slidesToShow: 6,
+    // slidesToShow: 6,
     arrows: false,
     cssEase: "linear",
     autoplay: true,
     autoplaySpeed: 0,
     speed: 3000,
+    variableWidth: true,
   })
 
   // map animation

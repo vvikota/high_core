@@ -64,6 +64,10 @@ body {
   left: 37%;
 }
 
+.main-background-tablet{
+  display: none;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,7 +481,7 @@ header .header-menu {
 
 .metaverse .slider-wrapper{
   position: relative;
-  height: 500px;
+  height: 630px;
 }
 
 .metaverse .metaverse-slider {
@@ -603,6 +607,10 @@ header .header-menu {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 105px;
+}
+
+.game .title-wrapper{
+  margin-right: 50px;
 }
 
 .game .title-wrapper p {
@@ -1093,6 +1101,7 @@ header .header-menu {
   margin-top: -110px;
   background: url("./img/roadmap.png") no-repeat 0px 175px,
     url("./img/roadmap_girl.png") no-repeat 55% 0;
+  background-size: 100%, auto;  
   z-index: 2;
 }
 
@@ -1202,19 +1211,22 @@ header .header-menu {
 }
 
 .partners .partner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 33.333%;
-  padding: 88px 118px;
+  height: 250px;
   font-family: Gilroy, sans-serif;
   font-size: 64px;
   font-weight: 700;
   line-height: 72px;
   color: rgba(255, 255, 255, 0.7);
-  border-top: 1px solid #242028;
+  border-bottom: 1px solid #242028;
+  border-right: 1px solid #242028;
 }
 
-.partners .partner-wrapper:nth-child(3n + 1),
-.partners .partner-wrapper:nth-child(3n + 2) {
-  border-right: 1px solid #242028;
+.partners .partner-wrapper img{
+  max-width: 157px;
 }
 
 footer {
@@ -1241,4 +1253,292 @@ footer .footer-links a {
 
 footer .footer-links a:first-child {
   margin-right: 80px;
+}
+
+@media(max-width: 1430px){
+  section.roadmap{
+    padding-bottom: 50px;
+  }
+
+  .roadmap .roadmap-content {
+    height: 715px;
+    background-size: 850px, auto;  
+  }
+
+
+  .roadmap .tooltip:nth-child(1) {
+    top: 160px;
+    left: 490px;
+  }
+  .roadmap.showAnimation .tooltip:nth-child(1) {
+    top: 180px;
+  }
+  
+  .roadmap .tooltip:nth-child(2) {
+    top: 160px;
+    left: 200px;
+  }
+  .roadmap.showAnimation .tooltip:nth-child(2) {
+    top: 180px;
+  }
+  .roadmap .tooltip:nth-child(3) {
+    top: 285px;
+    left: 605px;
+  }
+  .roadmap.showAnimation .tooltip:nth-child(3) {
+    top: 305px;
+  }
+  .roadmap .tooltip:nth-child(4) {
+    top: 330px;
+    left: 350px;
+  }
+  .roadmap.showAnimation .tooltip:nth-child(4) {
+    top: 350px;
+  }
+  .roadmap .tooltip:nth-child(5) {
+    top: 360px;
+    left: 75px;
+  }
+  .roadmap.showAnimation .tooltip:nth-child(5) {
+    top: 380px;
+  }
+}
+
+@media(max-width: 1350px){
+  .game .title-row{
+    flex-direction: column;
+  }
+
+  .game .title-row .title-wrapper{
+    margin-bottom: 20px;
+  }
+
+  .game .features-item {
+    padding-right: 50px;
+  }
+
+  section.key{
+    padding-bottom: 50px;
+  }
+
+  section.team{
+    padding-top: 70px;
+  }
+
+  .key .key-content{
+    justify-content: flex-start;
+  }
+
+  .key .key-item{
+    margin-bottom: 50px;
+  }
+
+  .key .key-item:nth-child(1),
+  .key .key-item:nth-child(3),
+  .key .key-item:nth-child(5) {
+    margin-right: 50px;
+  }
+
+  .key .key-item:nth-child(2),
+  .key .key-item:nth-child(4),
+  .key .key-item:nth-child(6) {
+    margin-right: 0;
+  }
+}
+
+@media(max-width: 1250px){
+
+  .team .team-content{
+    max-width: 592px;
+  }
+
+  .team .vertical-border,
+  .team .horizontal--first,
+  .team .horizontal--second{
+    display: none;
+  }
+
+  .team .dev-card {
+    width: 100%;
+    border-bottom: 1px solid #242028;
+  }
+
+  .roadmap .roadmap-content {
+    background: url("./img/roadmap.png") no-repeat 0px 175px,
+    url("./img/roadmap_girl.png") no-repeat 88% 0;
+    background-size: 850px, auto;  
+  }
+}
+
+@media(max-width: 1150px){
+  .main-background{
+    display: none;
+  }
+
+  .main-background-tablet{
+    display: block;
+    position: absolute;
+    top: 335px;
+    left: 20px;
+  }
+
+  .home{
+    padding-top: 100px;
+  }
+
+  .home:after {
+    display: none;
+  }
+
+  .home .pre-title{
+    margin-top: 50px;
+  }
+
+  .home .download-links {
+    margin-bottom: 668px;
+  }
+
+  section.home{
+    padding-bottom: 30px;
+  }
+
+  section.metaverse{
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  section.game{
+    padding-top: 100px;
+  }
+
+  .game .features-row{
+    flex-wrap: wrap;
+  }
+
+  .game .features-item{
+    width: 50%;
+    margin-bottom: 60px;
+  }
+
+  .roadmap:before{
+    display: none;
+  }
+
+  .roadmap .roadmap-content{
+    height: auto;
+    margin-top: 100px;
+    padding-left: 85px;
+    background: none;
+  }
+
+  .roadmap .tooltip,
+  .roadmap.showAnimation .tooltip:nth-child(1),
+  .roadmap.showAnimation .tooltip:nth-child(2),
+  .roadmap.showAnimation .tooltip:nth-child(3),
+  .roadmap.showAnimation .tooltip:nth-child(4),
+  .roadmap.showAnimation .tooltip:nth-child(5){
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 420px;
+    height: 362px;
+    padding: 70px 105px;
+    margin-bottom: 25px;
+    background-size: 100% 100%;
+  }
+
+  .roadmap .tooltip:after,
+  .roadmap .tooltip:before{
+    position: absolute;
+    content: "";
+    display: block;
+  }
+
+  .roadmap .tooltip:after{
+    top: 0;
+    left: -80px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #FFDA06;
+  }
+
+  .roadmap .tooltip:before{
+    top: 25px;
+    left: -68px;
+    width: 1px;
+    height: 100%;
+    background-color: #3A3540;
+  }
+
+  .roadmap .tooltip:first-child:after{
+    background-color: #28C76A;
+  }
+
+  .roadmap .tooltip:last-child:before{
+    display: none;
+  }
+
+  .roadmap .tooltip h5{
+    margin-bottom: 15px;
+  }
+
+  .roadmap .tooltip p{
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+@media(max-width: 980px){
+  h2{
+    font-size: 70px;
+    line-height: 76.16px;
+  }
+
+  section{
+    padding-left: 40px;
+  }
+
+  .aside{
+    width: 103px;
+  }
+
+  .page-content {
+    padding-left: 103px;
+  }
+
+  .page-content:before {
+    backdrop-filter: none;
+    background-color: transparent;
+  }
+
+  header{
+    border-bottom: none;
+  }
+
+  .logo{
+    margin-left: 24px;
+  }
+
+  .logo:after,
+  .logo:before{
+    display: none;
+  }
+
+  .header-wrapper{
+    display: none;
+  }
+
+  .partners .partner-wrapper {
+    width: 50%;
+  }
+}
+
+@media(max-width: 830px){
+  .partners .section-title {
+    margin-bottom: 55px;
+  }
+  .partners .partner-wrapper img{
+    max-width: 120px;
+  }
 }
