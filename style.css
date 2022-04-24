@@ -779,63 +779,17 @@ header .header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.game .map-row .map {
-  position: relative;
-  width: 570px;
-  height: 350px;
-}
-
-.game .map-row .map:after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: 0 0 100px 100px rgb(176 108 210 / 20%);
-  box-shadow: 0 0 100px 100px rgb(176 108 210 / 20%);
-  z-index: 1;
-  border-radius: 50%;
-  background-color: rgba(176, 108, 210, 0.2);
-}
-
-.game .map-row.map--left .map:after {
-  left: -35px;
-}
-
-.game .map-row.map--right .map:after {
-  left: 35px;
-}
-
-.game .map-row .map img {
-  position: absolute;
-  z-index: 2;
-}
-
-.game .map--left .map img {
-  left: -40px;
-}
-
-.game .map--right .map img {
-  right: -40px;
-}
-
-.game .map--left {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  margin-bottom: 80px;
-}
-
-.game .map--right {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.game .map-row .map img{
+  margin-top: -50px;
 }
 
 .game .map-description {
-  padding-top: 50px;
+  margin-top: -120px;
 }
 
 .game .map-description h5 {
