@@ -80,11 +80,11 @@ $(document).ready(function () {
   changeSliderWidth()
 
   $(window).on("resize", changeSliderWidth)
-  
+
   $(".metaverse-slider").on("init", function (event, slick) {
     changeSliderWidth()
   })
-  
+
   $(".metaverse-slider").imagesLoaded(function () {
     $(".metaverse .slider-wrapper").height(setMaxHeight())
   })
@@ -115,7 +115,6 @@ $(document).ready(function () {
 
   // tanks slider
   $(".tank-slider").slick({
-    // slidesToShow: 6,
     arrows: false,
     cssEase: "linear",
     autoplay: true,
@@ -177,5 +176,23 @@ $(document).ready(function () {
   $(".header-menu li a ").click(function (e) {
     $("header .header-wrapper").removeClass("active")
     $("body").removeClass("block-scroll")
+  })
+
+  $(window).on("load resize orientationchange", function () {
+
+    if ($(window).width() > 1135) {
+      if ($(".key-content").hasClass('slick-initialized')) {
+        $(".key-content").slick('unslick');
+      }
+    } else {
+      $(".key-content").slick({
+        arrows: false,
+        cssEase: "linear",
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 3000,
+        variableWidth: true,
+      })
+    }
   })
 })
