@@ -162,4 +162,20 @@ $(document).ready(function () {
   videoResize()
 
   $(window).on("resize", videoResize)
+
+  // mobile menu
+  $(".burger-button").click(function (e) {
+    $("body").addClass("block-scroll")
+    $("header .header-wrapper").addClass("active")
+  })
+
+  $(".mobile-menu-closer").click(function (e) {
+    $("header .header-wrapper").removeClass("active")
+    $("body").removeClass("block-scroll")
+  })
+
+  $(".header-menu li a ").click(function (e) {
+    $("header .header-wrapper").removeClass("active")
+    $("body").removeClass("block-scroll")
+  })
 })
