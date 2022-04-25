@@ -178,13 +178,13 @@ $(document).ready(function () {
     $("body").removeClass("block-scroll")
   })
 
+  // key features slider
   $(window).on("load resize orientationchange", function () {
-
     if ($(window).width() > 1135) {
-      if ($(".key-content").hasClass('slick-initialized')) {
-        $(".key-content").slick('unslick');
+      if ($(".key-content").hasClass("slick-initialized")) {
+        $(".key-content").slick("unslick")
       }
-    } else {
+    } else if (!$(".key-content").hasClass("slick-initialized")){
       $(".key-content").slick({
         arrows: false,
         cssEase: "linear",

@@ -806,12 +806,32 @@ header .social-links--mobile{
   margin-bottom: 20px;
 }
 
+.map--with-background{
+  position: relative;
+  margin-top: 120px;
+}
+
+.map--with-background:before {
+  position: absolute;
+  content: "";
+  top: 30%;
+  left: 40%;
+  display: block;
+  width: 20%;
+  height: 1px;
+  box-shadow: 0 0 350px 300px rgba(0, 132, 254, 0.15);
+  z-index: 1;
+  border-radius: 50%;
+}
+
 .game .map-row .map img {
+  position: relative;
+  z-index: 2;
   margin-top: -50px;
 }
 
 .game .map-description {
-  margin-top: -120px;
+  margin-top: -60px;
 }
 
 .game .map-description h5 {
@@ -1102,9 +1122,10 @@ header .social-links--mobile{
 .roadmap .tooltip {
   position: absolute;
   width: 214px;
-  height: 185px;
+  height: 205px;
   padding: 23px 30px;
-  background: url("./img/tooltip.svg") no-repeat;
+  background: url("./img/tooltip.png") no-repeat;
+  background-size: 214px 205px;
   z-index: 1;
   opacity: 0;
   -webkit-transition: 0.8s ease all;
@@ -1123,47 +1144,55 @@ header .social-links--mobile{
 
 .roadmap .tooltip p {
   font-family: Montserrat, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 19.5px;
   color: #ffffff;
 }
 
+.roadmap .tooltip span.selection{
+  font-size: 13px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  line-height: 16px;
+  color: #FFDA06;
+}
+
 .roadmap .tooltip:nth-child(1) {
-  top: 155px;
+  top: 145px;
   left: 715px;
 }
 .roadmap.showAnimation .tooltip:nth-child(1) {
-  top: 235px;
+  top: 220px;
 }
 
 .roadmap .tooltip:nth-child(2) {
-  top: 155px;
+  top: 140px;
   left: 315px;
 }
 .roadmap.showAnimation .tooltip:nth-child(2) {
-  top: 235px;
+  top: 220px;
 }
 .roadmap .tooltip:nth-child(3) {
-  top: 350px;
+  top: 335px;
   left: 870px;
 }
 .roadmap.showAnimation .tooltip:nth-child(3) {
-  top: 430px;
+  top: 415px;
 }
 .roadmap .tooltip:nth-child(4) {
-  top: 415px;
+  top: 400px;
   left: 520px;
 }
 .roadmap.showAnimation .tooltip:nth-child(4) {
-  top: 495px;
+  top: 480px;
 }
 .roadmap .tooltip:nth-child(5) {
-  top: 450px;
+  top: 435px;
   left: 145px;
 }
 .roadmap.showAnimation .tooltip:nth-child(5) {
-  top: 530px;
+  top: 515px;
 }
 
 .partners {
@@ -1251,40 +1280,40 @@ footer .footer-links a:first-child {
   }
 
   .roadmap .tooltip:nth-child(1) {
-    top: 160px;
+    top: 130px;
     left: 490px;
   }
   .roadmap.showAnimation .tooltip:nth-child(1) {
-    top: 180px;
+    top: 150px;
   }
 
   .roadmap .tooltip:nth-child(2) {
-    top: 160px;
+    top: 130px;
     left: 200px;
   }
   .roadmap.showAnimation .tooltip:nth-child(2) {
-    top: 180px;
+    top: 150px;
   }
   .roadmap .tooltip:nth-child(3) {
-    top: 285px;
+    top: 255px;
     left: 605px;
   }
   .roadmap.showAnimation .tooltip:nth-child(3) {
-    top: 305px;
+    top: 275px;
   }
   .roadmap .tooltip:nth-child(4) {
-    top: 330px;
+    top: 300px;
     left: 350px;
   }
   .roadmap.showAnimation .tooltip:nth-child(4) {
-    top: 350px;
+    top: 320px;
   }
   .roadmap .tooltip:nth-child(5) {
-    top: 360px;
+    top: 330px;
     left: 75px;
   }
   .roadmap.showAnimation .tooltip:nth-child(5) {
-    top: 380px;
+    top: 350px;
   }
 }
 
@@ -1318,7 +1347,10 @@ footer .footer-links a:first-child {
             justify-content: flex-start;
   }
 
-  .key .key-item {
+  .key .key-item,
+  .key .key-item:nth-child(1),
+  .key .key-item:nth-child(2),
+  .key .key-item:nth-child(3) {
     margin-bottom: 50px;
   }
 
@@ -1581,6 +1613,8 @@ footer .footer-links a:first-child {
     width: 100vw;
     height: 100vh;
     background-color: #242028;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   header .header-wrapper.active {
@@ -1624,6 +1658,7 @@ footer .footer-links a:first-child {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 45px;        
   }
 
   .header-menu li{
@@ -1666,12 +1701,12 @@ footer .footer-links a:first-child {
   }
 
   header .green-button:before{
-    position: fixed;
+    position: absolute;
     content: "";
     display: block;
-    width: 100vw;
+    width: 150vw;
     height: 2px;
-    left: 0;
+    left: -50vw;
     background-color: #19161C;
     -webkit-transform: translateY(-70px);
         -ms-transform: translateY(-70px);
