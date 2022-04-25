@@ -46,6 +46,9 @@ h5 {
 
 body {
   background: #242028;
+}
+
+.main-wrapper{
   overflow-x: hidden;
 }
 
