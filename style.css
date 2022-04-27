@@ -812,7 +812,7 @@ header .social-links--mobile{
 
 .map--with-background{
   position: relative;
-  margin-top: 120px;
+  margin-top: 180px;
 }
 
 .map--with-background:before {
@@ -973,6 +973,7 @@ header .social-links--mobile{
 }
 
 .key .key-item h5 {
+  height: 32px;
   margin-top: 0;
   margin-bottom: 0;
   color: #ffda06;
@@ -1148,6 +1149,7 @@ header .social-links--mobile{
 }
 
 .roadmap .tooltip p {
+  text-align: center;
   font-family: Montserrat, sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -1156,6 +1158,8 @@ header .social-links--mobile{
 }
 
 .roadmap .tooltip span.selection{
+  display: inline-block;
+  margin-bottom: 10px;
   font-size: 13px;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
@@ -1575,10 +1579,6 @@ footer .footer-links a:first-child {
     margin-right: 30px;
   }
 
-  .key-item.item--big-title img{
-    margin-top: -30px;
-  }
-
   .roadmap:before {
     display: none;
   }
@@ -1648,7 +1648,8 @@ footer .footer-links a:first-child {
     margin-bottom: 15px;
   }
 
-  .roadmap .tooltip p {
+  .roadmap .tooltip p,
+  .roadmap .tooltip span.selection {
     font-size: 18px;
     line-height: 27px;
   }
