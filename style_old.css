@@ -165,18 +165,15 @@ body.block-scroll {
 }
 
 .social-links li:nth-child(1) a {
-  background-image: url("./img/discord_white.svg");
-}
-.social-links li:nth-child(2) a {
   background-image: url("./img/twitter_logo.svg");
 }
-.social-links li:nth-child(3) a {
+.social-links li:nth-child(2) a {
   background-image: url("./img/telegram_logo.svg");
 }
-.social-links li:nth-child(4) a {
+.social-links li:nth-child(3) a {
   background-image: url("./img/note_logo.svg");
 }
-.social-links li:nth-child(5) a {
+.social-links li:nth-child(4) a {
   background-image: url("./img/oval_logo.svg");
 }
 
@@ -398,55 +395,79 @@ header .social-links--mobile{
   border-radius: 5px;
 }
 
-.home .sale {
+.home .tokens {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  align-items: center;
-  max-width: 528px;
-  margin-top: 35px;
-  padding: 30px;
+  max-width: 553px;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 10px;
 }
 
-.home .sale h5 {
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 19px;
-  padding-right: 90px;
-}
-
-.home .sale h5:before {
+.home .tokens:after {
   position: absolute;
-  top: -23px;
-  left: 75px;
+  left: 50%;
   content: "";
   display: block;
-  width: 115px;
-  height: 100px;
-  background-image: url("./img/sale_tooltip.svg");
+  width: 1px;
+  height: 100%;
+  background-color: #242028;
+}
+
+.home .token {
+  padding: 25px;
+}
+
+.home .token-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  color: #ffffff;
+}
+
+.home .token-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.home .token-link p {
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19.5px;
+  color: #a39cab;
+}
+
+.home .token-link button {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  background-image: url("./img/copy.svg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-position: 3px 3px;
+  cursor: pointer;
 }
 
-.home .sale h5:after {
-  position: absolute;
-  top: 0px;
-  left: 107px;
-  content: "sale";
-  display: block;
-}
-
-.home .sale .green-button{
-  margin-top: -53px;
+.home .green-button {
+  width: 126px;
+  height: 41px;
 }
 
 .metaverse {
@@ -1112,10 +1133,10 @@ header .social-links--mobile{
 .roadmap .tooltip {
   position: absolute;
   width: 214px;
-  height: 225px;
-  padding: 23px 20px;
+  height: 205px;
+  padding: 23px 30px;
   background: url("./img/tooltip.png") no-repeat;
-  background-size: 214px 225px;
+  background-size: 214px 205px;
   z-index: 1;
   opacity: 0;
   -webkit-transition: 0.8s ease all;
@@ -1132,26 +1153,8 @@ header .social-links--mobile{
   margin-bottom: 5px;
 }
 
-.roadmap .tooltip.tooltip--checked h5 {
-  position: relative;
-  padding-left: 33px;
-}
-
-.roadmap .tooltip.tooltip--checked h5:before {
-  position: absolute;
-  top: 2px;
-  left: 0;
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("./img/green_check.svg");
-  background-repeat: no-repeat;
-}
-
 .roadmap .tooltip p {
-  position: relative;
-  padding-left: 11px;
+  text-align: center;
   font-family: Montserrat, sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -1159,25 +1162,13 @@ header .social-links--mobile{
   color: #ffffff;
 }
 
-.roadmap .tooltip p:before {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  content: "";
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #FFDA06;
-}
-
 .roadmap .tooltip span.selection{
   display: inline-block;
   margin-bottom: 10px;
   font-size: 13px;
   font-family: Montserrat, sans-serif;
-  font-weight: 800;
-  line-height: 150%;
+  font-weight: 500;
+  line-height: 16px;
   color: #FFDA06;
 }
 
