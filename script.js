@@ -52,14 +52,28 @@ $(document).ready(function () {
   })
 
   // metaverse slider
-
   function changeSliderWidth() {
     const windowWidth = $(window).width()
     const contentWidth = $(".wrapper").width()
-    const nextArrowPosition = contentWidth - 370
+    let nextArrowPosition
+
+    if(windowWidth > 820){
+      nextArrowPosition = contentWidth - 370
+    } else if (windowWidth < 820 && windowWidth > 620){
+      nextArrowPosition = contentWidth - 270 
+    } else if (windowWidth < 620){
+      nextArrowPosition = contentWidth - 135 
+    }
 
     $(".metaverse-slider").width(windowWidth + 26)
-    $(".metaverse-slider").css("left", "0px")
+
+    if(windowWidth > 620){
+      $(".metaverse-slider").css("left", "0px")
+    } else {
+      $(".metaverse-slider").css("left", "50px")
+    }
+
+
     $(".metaverse-slider .slick-next").css("left", nextArrowPosition + "px")
     $(".metaverse button.first-slide").css("left", nextArrowPosition + "px")
   }
@@ -140,7 +154,11 @@ $(document).ready(function () {
     const bias = (windowWidth - contentWidth) / 2 + asideWidth
     $(".video-wrapper").width(windowWidth)
 
-    $(".video-wrapper").css("left", "-" + bias + "px")
+    if(windowWidth > 620){
+      $(".video-wrapper").css("left", "-" + bias + "px")
+    } else {
+      $(".video-wrapper").css("left", "0")
+    }
 
     $(".video").outerHeight(videoSectionHeight + videoContentHeight + 100)
   }
