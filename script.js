@@ -52,19 +52,6 @@ $(document).ready(function () {
   })
 
   // metaverse slider
-  function setMaxHeight() {
-    let els = document.querySelectorAll(".metaverse .metaverse-slider .slide"),
-      arr = []
-    for (let i = 0; i < els.length; i++) {
-      arr.push({ height: els[i].clientHeight })
-    }
-    let elsMaxHeight = Math.max(...arr.map((o) => o.height))
-    for (let i = 0; i < els.length; i++) {
-      els[i].style.height = elsMaxHeight + "px"
-    }
-
-    return elsMaxHeight
-  }
 
   function changeSliderWidth() {
     const windowWidth = $(window).width()
@@ -83,10 +70,6 @@ $(document).ready(function () {
 
   $(".metaverse-slider").on("init", function (event, slick) {
     changeSliderWidth()
-  })
-
-  $(".metaverse-slider").imagesLoaded(function () {
-    $(".metaverse .slider-wrapper").height(setMaxHeight())
   })
 
   $(".metaverse-slider").slick({
@@ -121,6 +104,10 @@ $(document).ready(function () {
     autoplaySpeed: 0,
     speed: 3000,
     variableWidth: true,
+    dots: true,
+    customPaging: function (slick, index) {
+      return "<span></span>"
+    },
   })
 
   // map animation
