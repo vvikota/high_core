@@ -161,16 +161,20 @@ body.block-scroll {
 .social-links li:nth-child(1) a {
   background-image: url("./img/discord_white.svg");
 }
-.social-links li:nth-child(2) a {
+.social-links li:nth-child(2) a,
+.social-links--mobile li:nth-child(1) a {
   background-image: url("./img/twitter_logo.svg");
 }
-.social-links li:nth-child(3) a {
+.social-links li:nth-child(3) a,
+.social-links--mobile li:nth-child(2) a {
   background-image: url("./img/telegram_logo.svg");
 }
-.social-links li:nth-child(4) a {
+.social-links li:nth-child(4) a,
+.social-links--mobile li:nth-child(3) a {
   background-image: url("./img/note_logo.svg");
 }
-.social-links li:nth-child(5) a {
+.social-links li:nth-child(5) a,
+.social-links--mobile li:nth-child(4) a {
   background-image: url("./img/oval_logo.svg");
 }
 
@@ -397,22 +401,21 @@ header .social-links--mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 528px;
   margin-top: 35px;
   padding: 30px;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3a3540),
-    to(#2f2a34)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 10px;
 }
@@ -655,13 +658,7 @@ header .social-links--mobile {
   flex-wrap: wrap;
   width: 100%;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3a3540),
-    to(#2f2a34)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 10px;
 }
@@ -802,13 +799,7 @@ header .social-links--mobile {
   height: 270px;
   margin-right: 5px;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3a3540),
-    to(#2f2a34)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 24.537px;
 }
@@ -852,15 +843,20 @@ header .social-links--mobile {
   margin-bottom: 20px;
 }
 
-.map--with-background {
+.game .map h5{
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.map-row {
   position: relative;
   margin-top: 180px;
 }
 
-.map--with-background:before {
+.map-row:before {
   position: absolute;
   content: "";
-  top: 30%;
+  top: 50%;
   left: 40%;
   display: block;
   width: 20%;
@@ -869,16 +865,59 @@ header .social-links--mobile {
   box-shadow: 0 0 350px 300px rgba(0, 132, 254, 0.15);
   z-index: 1;
   border-radius: 50%;
+  background-color: rgba(0, 132, 254, 0.15);
+}
+
+.row--with-border:after{
+  position: absolute;
+  content: "";
+  top: 110%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}
+
+.game .map-row .map{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .game .map-row .map img {
   position: relative;
   z-index: 2;
-  margin-top: -50px;
+  margin-top: -30px;
+}
+
+.row--second{
+  margin-top: 160px;
+}
+
+.row--second .map img{
+  max-width: 960px;
+}
+
+.game .row--with-border .map img{
+  margin-top: -120px;
+}
+
+.game .row--with-border .map-description{
+  margin-top: -60px;
 }
 
 .game .map-description {
-  margin-top: -60px;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .game .map-description h5 {
@@ -886,8 +925,18 @@ header .social-links--mobile {
 }
 
 .game .map-description ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-left: 0;
   list-style: none;
+}
+
+.game .map-description ul div{
+  width: 50%;
 }
 
 .game .map-description li {
@@ -945,13 +994,7 @@ header .social-links--mobile {
   left: 0;
   z-index: 2;
   background: -o-linear-gradient(bottom, #242028, transparent);
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#242028),
-    to(transparent)
-  );
+  background: -webkit-gradient(linear, left bottom, left top, from(#242028), to(transparent));
   background: linear-gradient(0deg, #242028, transparent);
 }
 
@@ -1008,13 +1051,7 @@ header .social-links--mobile {
   width: 330px;
   padding: 34px 46px;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#3a3540),
-    to(#2f2a34)
-  );
+  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border: 2px solid #ffda06;
   border-radius: 26.5px;
@@ -1229,7 +1266,8 @@ header .social-links--mobile {
   color: #ffffff;
 }
 
-.roadmap .tooltip p:before {
+.roadmap .tooltip p:before,
+.roadmap .tooltip span.selection:before{
   position: absolute;
   top: 8px;
   left: 0;
@@ -1242,13 +1280,19 @@ header .social-links--mobile {
 }
 
 .roadmap .tooltip span.selection {
+  position: relative;
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  padding-left: 11px;
   font-size: 13px;
   font-family: Montserrat, sans-serif;
   font-weight: 800;
   line-height: 150%;
   color: #ffda06;
+}
+
+.roadmap .tooltip span.selection--without-margin {
+  margin-bottom: 0;
 }
 
 .roadmap .tooltip:nth-child(1) {
@@ -1531,6 +1575,13 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 1250px) {
+  .game .map-description ul{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .team .team-content {
     max-width: 592px;
   }
@@ -1545,6 +1596,7 @@ footer .footer-links a:first-child {
     width: 100%;
     border-bottom: 1px solid #242028;
   }
+
 }
 
 @media (max-width: 1215px) {
@@ -1637,6 +1689,14 @@ footer .footer-links a:first-child {
     padding-top: 100px;
   }
 
+  .game .row--with-border .map img {
+    margin-top: -70px;
+  }
+
+  .row--second .map img {
+    max-width: 800px;
+  }
+
   .game .features-row {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -1669,8 +1729,13 @@ footer .footer-links a:first-child {
   }
 
   .roadmap .roadmap-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     height: auto;
     margin-top: 100px;
     padding-left: 85px;
@@ -1968,6 +2033,20 @@ footer .footer-links a:first-child {
     background-size: 60px 60px;
   }
 
+  .map-row:before {
+    top: 39%;
+    -webkit-box-shadow: 0 0 250px 200px rgb(0 132 254 / 16%);
+            box-shadow: 0 0 250px 200px rgb(0 132 254 / 16%);
+  }
+
+  .game .row--with-border .map-description {
+    margin-top: -20px;
+  }
+
+  .row--second .map img {
+    max-width: 650px;
+  }
+
   .partners .partner-wrapper {
     width: 50%;
   }
@@ -2026,6 +2105,24 @@ footer .footer-links a:first-child {
     font-size: 60px;
     line-height: 62px;
   }
+
+  .row--second {
+    margin-top: 110px;
+  }
+
+  
+  .row--second .map img {
+    max-width: 500px;
+    margin-top: -10px;
+  }
+
+  .game .map-description ul div {
+    width: 100%;
+  }
+
+  .game .map-description li{
+    white-space: normal;
+  }
 }
 
 @media (max-width: 750px) {
@@ -2056,16 +2153,55 @@ footer .footer-links a:first-child {
     margin-top: 480px;
   }
 
+  .row--second .map img {
+    max-width: 350px;
+  }
+
+  .map-row:before {
+    top: 46%;
+    -webkit-box-shadow: 0 0 150px 100px rgb(0 132 254 / 16%);
+            box-shadow: 0 0 150px 100px rgb(0 132 254 / 16%);
+  }
+
+  .row--with-border:after{
+    height: 1px;
+  }
+
+  .map-row {
+    margin-top: 130px;
+  }
+
+  .game .row--with-border .map img {
+    margin-top: -50px;
+  }
+
+  .game .map-description li {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .game .map-description li:before {
+    top: 6px;
+    width: 5px;
+    height: 5px;
+  }
+
+  .row--second {
+    margin-top: 70px;
+  }
+
   .team .image-wrapper {
     margin-right: 15px;
   }
 
   .team .dev-position {
     font-size: 12px;
-    line-height: 32px;
+    line-height: 25px;
   }
 
   .team .text-wrapper h5 {
+    margin-bottom: 5px;
     font-size: 18px;
     line-height: 32px;
   }
@@ -2073,6 +2209,26 @@ footer .footer-links a:first-child {
   .team .dev-info {
     font-size: 12px;
     line-height: 18px;
+  }
+
+  .team .text-wrapper {
+    padding-top: 15px;
+  }
+
+  .roadmap .tooltip,
+  .roadmap .tooltip:nth-child(1),
+  .roadmap.showAnimation .tooltip:nth-child(1),
+  .roadmap .tooltip:nth-child(2),
+  .roadmap.showAnimation .tooltip:nth-child(2),
+  .roadmap .tooltip:nth-child(3),
+  .roadmap.showAnimation .tooltip:nth-child(3),
+  .roadmap .tooltip:nth-child(4),
+  .roadmap.showAnimation .tooltip:nth-child(4),
+  .roadmap .tooltip:nth-child(5),
+  .roadmap.showAnimation .tooltip:nth-child(5) {
+    width: 290px;
+    height: 320px;
+    padding: 27px 45px;
   }
 }
 
@@ -2142,6 +2298,10 @@ footer .footer-links a:first-child {
     line-height: 24px;
   }
 
+  header .social-links--mobile{
+    margin-bottom: 50px;
+  }
+
   header .header-wrapper .green-button {
     width: 125px;
     height: 36px;
@@ -2150,7 +2310,9 @@ footer .footer-links a:first-child {
   }
 
   header .green-button:before {
-    transform: translateY(-55px);
+    -webkit-transform: translateY(-55px);
+        -ms-transform: translateY(-55px);
+            transform: translateY(-55px);
   }
 
   .social-links a {
@@ -2184,6 +2346,15 @@ footer .footer-links a:first-child {
 
   .home .sale {
     margin-top: 430px;
+  }
+
+  .home .sale h5:before {
+    top: -27px;
+    left: 55px;
+  }
+
+  .home .sale h5:after {
+    left: 94px;
   }
 
   .metaverse .section-title {
@@ -2259,6 +2430,22 @@ footer .footer-links a:first-child {
     line-height: 18px;
   }
 
+  .row--second .map img {
+    max-width: 350px;
+  }
+
+  .game .map-row .map img {
+    margin-top: 0px;
+  }
+
+  .game .row--with-border .map img{
+    margin-top: -50px;
+  }
+
+  .map-row:before {
+    top: 40%;
+  }
+
   section.video p {
     font-size: 18px;
     line-height: 22px;
@@ -2285,27 +2472,146 @@ footer .footer-links a:first-child {
     margin-top: 35px;
   }
 
-  .roadmap .tooltip,
-  .roadmap .tooltip:nth-child(1),
-  .roadmap.showAnimation .tooltip:nth-child(1),
-  .roadmap .tooltip:nth-child(2),
-  .roadmap.showAnimation .tooltip:nth-child(2),
-  .roadmap .tooltip:nth-child(3),
-  .roadmap.showAnimation .tooltip:nth-child(3),
-  .roadmap .tooltip:nth-child(4),
-  .roadmap.showAnimation .tooltip:nth-child(4),
-  .roadmap .tooltip:nth-child(5),
-  .roadmap.showAnimation .tooltip:nth-child(5) {
-    width: 290px;
-    height: 320px;
-    padding: 27px 45px;
-  }
-
   .partners {
     margin-bottom: 50px;
   }
 
+  .partners .section-title {
+    margin-bottom: 20px;
+  }
+
   footer {
     padding: 18px 22px;
+  }
+}
+
+@media (max-width: 520px) {
+  .home .sale {
+    margin-top: 355px;
+  }
+
+  .game .statistics-wrapper {
+    margin-top: 0px;
+  }
+
+  .game .title-row {
+    margin-bottom: 70px;
+  }
+
+  .game .statistics-item {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #242028;
+  }
+
+  .game .statistics::before,
+  .game .statistics::after,
+  .game .statistics-wrapper .statistics-background{
+    display: none;
+  }
+
+  .game .features-item{
+    margin-bottom: 30px;
+    padding-right: 30px;
+  }
+  
+  .partners .partner-wrapper{
+    height: 150px;
+  }
+
+  .partners .partner-wrapper img {
+    max-width: 67px;
+  }
+
+  footer .footer-links a:first-child {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-background-tablet {
+    top: 214px;
+    left: -23px;
+  }
+
+  .home .sale {
+    margin-top: 300px;
+    padding: 24px 5px;
+  }
+
+  .home .sale h5{
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .home .sale h5:before{
+    left: 40px;
+    top: -32px;
+    width: 80px;
+  }
+
+  .home .sale h5:after {
+    left: 66px;
+  }
+
+  .home .sale .green-button{
+    width: 125px;
+    height: 36px;
+    margin-top: -48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .home .sale .green-button img{
+    width: 19px;
+  }
+
+  .metaverse .section-title img {
+    width: 145px;
+  }
+
+  .roadmap .roadmap-content {
+    padding-left: 45px;
+  }
+
+  .roadmap .tooltip:after {
+    left: -45px;
+  }
+
+  .roadmap .tooltip:before {
+    left: -33px;
+  }
+}
+
+@media (max-width: 405px) {
+  .home .sale {
+    margin-top: 250px;
+  }
+
+  .home .sale .green-button {
+    margin-top: -43px;
+  }
+
+  .row--second .map img {
+    max-width: 300px;
+  }
+
+  .game .map-description {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .main-background-tablet {
+    top: 260px;
+  }
+
+  .home .sale {
+    margin-top: 270px;
+  }
+
+  .game .features-item {
+    padding-right: 20px;
   }
 }
