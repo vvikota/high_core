@@ -407,19 +407,25 @@ header .social-links--mobile {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 528px;
   margin-top: 35px;
   padding: 30px;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#3a3540),
+    to(#2f2a34)
+  );
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 10px;
 }
@@ -662,7 +668,13 @@ header .social-links--mobile {
   flex-wrap: wrap;
   width: 100%;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#3a3540),
+    to(#2f2a34)
+  );
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 10px;
 }
@@ -803,7 +815,13 @@ header .social-links--mobile {
   height: 270px;
   margin-right: 5px;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#3a3540),
+    to(#2f2a34)
+  );
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border-radius: 24.537px;
 }
@@ -847,9 +865,9 @@ header .social-links--mobile {
   margin-bottom: 20px;
 }
 
-.game .map h5{
+.game .map h5 {
   -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
 }
 
 .map-row {
@@ -872,7 +890,7 @@ header .social-links--mobile {
   background-color: rgba(0, 132, 254, 0.15);
 }
 
-.row--with-border:after{
+.row--with-border:after {
   position: absolute;
   content: "";
   top: 110%;
@@ -883,17 +901,17 @@ header .social-links--mobile {
   background-color: #000000;
 }
 
-.game .map-row .map{
+.game .map-row .map {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -903,19 +921,19 @@ header .social-links--mobile {
   margin-top: -30px;
 }
 
-.row--second{
+.row--second {
   margin-top: 160px;
 }
 
-.row--second .map img{
+.row--second .map img {
   max-width: 960px;
 }
 
-.game .row--with-border .map img{
+.game .row--with-border .map img {
   margin-top: -120px;
 }
 
-.game .row--with-border .map-description{
+.game .row--with-border .map-description {
   margin-top: -60px;
 }
 
@@ -933,13 +951,13 @@ header .social-links--mobile {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-left: 0;
   list-style: none;
 }
 
-.game .map-description ul div{
+.game .map-description ul div {
   width: 50%;
 }
 
@@ -998,7 +1016,13 @@ header .social-links--mobile {
   left: 0;
   z-index: 2;
   background: -o-linear-gradient(bottom, #242028, transparent);
-  background: -webkit-gradient(linear, left bottom, left top, from(#242028), to(transparent));
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#242028),
+    to(transparent)
+  );
   background: linear-gradient(0deg, #242028, transparent);
 }
 
@@ -1055,7 +1079,13 @@ header .social-links--mobile {
   width: 330px;
   padding: 34px 46px;
   background: -o-linear-gradient(top, #3a3540 0%, #2f2a34 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#3a3540), to(#2f2a34));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#3a3540),
+    to(#2f2a34)
+  );
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
   border: 2px solid #ffda06;
   border-radius: 26.5px;
@@ -1271,7 +1301,7 @@ header .social-links--mobile {
 }
 
 .roadmap .tooltip p:before,
-.roadmap .tooltip span.selection:before{
+.roadmap .tooltip span.selection:before {
   position: absolute;
   top: 8px;
   left: 0;
@@ -1579,11 +1609,11 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 1250px) {
-  .game .map-description ul{
+  .game .map-description ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .team .team-content {
@@ -1600,7 +1630,6 @@ footer .footer-links a:first-child {
     width: 100%;
     border-bottom: 1px solid #242028;
   }
-
 }
 
 @media (max-width: 1215px) {
@@ -1738,8 +1767,8 @@ footer .footer-links a:first-child {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     height: auto;
     margin-top: 100px;
     padding-left: 85px;
@@ -2040,7 +2069,7 @@ footer .footer-links a:first-child {
   .map-row:before {
     top: 39%;
     -webkit-box-shadow: 0 0 250px 200px rgb(0 132 254 / 16%);
-            box-shadow: 0 0 250px 200px rgb(0 132 254 / 16%);
+    box-shadow: 0 0 250px 200px rgb(0 132 254 / 16%);
   }
 
   .game .row--with-border .map-description {
@@ -2114,7 +2143,6 @@ footer .footer-links a:first-child {
     margin-top: 110px;
   }
 
-  
   .row--second .map img {
     max-width: 500px;
     margin-top: -10px;
@@ -2124,7 +2152,7 @@ footer .footer-links a:first-child {
     width: 100%;
   }
 
-  .game .map-description li{
+  .game .map-description li {
     white-space: normal;
   }
 }
@@ -2164,10 +2192,10 @@ footer .footer-links a:first-child {
   .map-row:before {
     top: 46%;
     -webkit-box-shadow: 0 0 150px 100px rgb(0 132 254 / 16%);
-            box-shadow: 0 0 150px 100px rgb(0 132 254 / 16%);
+    box-shadow: 0 0 150px 100px rgb(0 132 254 / 16%);
   }
 
-  .row--with-border:after{
+  .row--with-border:after {
     height: 1px;
   }
 
@@ -2207,7 +2235,7 @@ footer .footer-links a:first-child {
   .team .text-wrapper h5 {
     margin-bottom: 5px;
     font-size: 18px;
-    line-height: 32px;
+    line-height: 25px;
   }
 
   .team .dev-info {
@@ -2302,7 +2330,7 @@ footer .footer-links a:first-child {
     line-height: 24px;
   }
 
-  header .social-links--mobile{
+  header .social-links--mobile {
     margin-bottom: 50px;
   }
 
@@ -2315,8 +2343,8 @@ footer .footer-links a:first-child {
 
   header .green-button:before {
     -webkit-transform: translateY(-55px);
-        -ms-transform: translateY(-55px);
-            transform: translateY(-55px);
+    -ms-transform: translateY(-55px);
+    transform: translateY(-55px);
   }
 
   .social-links a {
@@ -2363,6 +2391,10 @@ footer .footer-links a:first-child {
 
   .metaverse .section-title {
     margin-bottom: 20px;
+  }
+
+  .metaverse .section-title .tail {
+    margin-left: -13px;
   }
 
   .metaverse .section-title img {
@@ -2442,7 +2474,7 @@ footer .footer-links a:first-child {
     margin-top: 0px;
   }
 
-  .game .row--with-border .map img{
+  .game .row--with-border .map img {
     margin-top: -50px;
   }
 
@@ -2510,16 +2542,25 @@ footer .footer-links a:first-child {
 
   .game .statistics::before,
   .game .statistics::after,
-  .game .statistics-wrapper .statistics-background{
+  .game .statistics-wrapper .statistics-background {
     display: none;
   }
 
-  .game .features-item{
+  .game .features-item {
     margin-bottom: 30px;
     padding-right: 30px;
   }
-  
-  .partners .partner-wrapper{
+
+  .game .slider-row .slick-dots span {
+    width: 6px;
+    height: 6px;
+  }
+
+  .game .slider-row .slick-dots .slick-active span {
+    width: 36px;
+  }
+
+  .partners .partner-wrapper {
     height: 150px;
   }
 
@@ -2543,13 +2584,13 @@ footer .footer-links a:first-child {
     padding: 24px 5px;
   }
 
-  .home .sale h5{
+  .home .sale h5 {
     margin-bottom: 15px;
     font-size: 14px;
     line-height: 18px;
   }
 
-  .home .sale h5:before{
+  .home .sale h5:before {
     left: 40px;
     top: -32px;
     width: 80px;
@@ -2559,7 +2600,7 @@ footer .footer-links a:first-child {
     left: 66px;
   }
 
-  .home .sale .green-button{
+  .home .sale .green-button {
     width: 125px;
     height: 36px;
     margin-top: -48px;
@@ -2567,7 +2608,7 @@ footer .footer-links a:first-child {
     line-height: 24px;
   }
 
-  .home .sale .green-button img{
+  .home .sale .green-button img {
     width: 19px;
   }
 
@@ -2597,12 +2638,25 @@ footer .footer-links a:first-child {
     margin-top: -43px;
   }
 
+  .metaverse .section-title img {
+    display: none;
+  }
+
   .row--second .map img {
-    max-width: 300px;
+    max-width: 330px;
+  }
+
+  .game .row--with-border .map img {
+    width: 405px;
+    max-width: initial;
   }
 
   .game .map-description {
     margin-top: 0;
+  }
+
+  .team .dev-card {
+    padding-right: 10px;
   }
 }
 
@@ -2615,7 +2669,58 @@ footer .footer-links a:first-child {
     margin-top: 270px;
   }
 
+  .home .sale .green-button {
+    margin-top: -40px;
+  }
+
   .game .features-item {
     padding-right: 20px;
+  }
+}
+
+@media (max-width: 370px) {
+  .main-background-tablet {
+    top: 335px;
+  }
+
+  .home .sale .green-button {
+    margin-top: -35px;
+  }
+
+  .home .sale {
+    margin-top: 235px;
+  }
+
+  .team .dev-card {
+    padding: 25px 20px;
+  }
+
+  .team .image-wrapper img {
+    width: 95px;
+  }
+
+  .team .image-wrapper {
+    width: 110px;
+    height: 110px;
+  }
+
+  .team .dev-position {
+    line-height: 15px;
+  }
+
+  .roadmap .tooltip,
+  .roadmap .tooltip:nth-child(1),
+  .roadmap.showAnimation .tooltip:nth-child(1),
+  .roadmap .tooltip:nth-child(2),
+  .roadmap.showAnimation .tooltip:nth-child(2),
+  .roadmap .tooltip:nth-child(3),
+  .roadmap.showAnimation .tooltip:nth-child(3),
+  .roadmap .tooltip:nth-child(4),
+  .roadmap.showAnimation .tooltip:nth-child(4),
+  .roadmap .tooltip:nth-child(5),
+  .roadmap.showAnimation .tooltip:nth-child(5) {
+    width: 235px;
+    height: 350px;
+    padding: 20px 25px;
   }
 }
