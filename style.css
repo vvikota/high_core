@@ -49,7 +49,8 @@ body {
 }
 
 .main-wrapper {
-  overflow-x: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 body.block-scroll {
@@ -68,8 +69,11 @@ body.block-scroll {
 
 .main-background {
   position: absolute;
-  top: 10px;
-  left: 37%;
+  top: -100px;
+  left: 50%;
+  width: 2550px;
+  transform: translateX(-50%);
+  max-width: initial;
 }
 
 .main-background-tablet {
