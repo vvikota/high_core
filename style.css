@@ -2660,9 +2660,9 @@ footer .footer-links a:first-child {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 390px) {
   .main-background-tablet {
-    top: 260px;
+    top: 280px;
   }
 
   .home .sale {
