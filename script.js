@@ -170,16 +170,16 @@ $(document).ready(function () {
   // mobile menu
   $(".burger-button").click(function (e) {
     $("body").addClass("block-scroll")
-    $("header .header-wrapper").addClass("active")
+    $(".burger-menu").addClass("active")
   })
 
   $(".mobile-menu-closer").click(function (e) {
-    $("header .header-wrapper").removeClass("active")
+    $(".burger-menu").removeClass("active")
     $("body").removeClass("block-scroll")
   })
 
   $(".header-menu li a ").click(function (e) {
-    $("header .header-wrapper").removeClass("active")
+    $(".burger-menu").removeClass("active")
     $("body").removeClass("block-scroll")
   })
 
