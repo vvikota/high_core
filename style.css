@@ -57,6 +57,10 @@ body.block-scroll {
   overflow: hidden;
 }
 
+body.block-scroll .page-content{
+  background-color: #242028;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
