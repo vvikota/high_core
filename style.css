@@ -1688,9 +1688,10 @@ footer .footer-links a:first-child {
 
   .main-background-tablet {
     display: block;
-    position: absolute;
-    top: 335px;
-    left: 20px;
+    width: 120%;
+    max-width: initial;
+    margin-top: -100px;
+    margin-left: -100px;
   }
 
   .home {
@@ -1705,8 +1706,8 @@ footer .footer-links a:first-child {
     margin-top: 50px;
   }
 
-  .home .sale {
-    margin-top: 668px;
+  .home .sale{
+    margin-top: -275px;
   }
 
   section.home {
@@ -2032,6 +2033,10 @@ footer .footer-links a:first-child {
     transform: translateY(-70px);
   }
 
+  .home .sale{
+    margin-top: -250px;
+  }
+
   .metaverse .section-title .tail {
     margin-left: -16px;
   }
@@ -2124,7 +2129,12 @@ footer .footer-links a:first-child {
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 850px) {
+  .main-background-tablet {
+    width: 140%;
+    margin-left: -150px;
+  }
+
   .partners .section-title {
     margin-bottom: 55px;
   }
@@ -2138,6 +2148,10 @@ footer .footer-links a:first-child {
     font-size: 60px;
     line-height: 62px;
   }
+
+  .home .sale {
+    margin-top: -210px;
+  } 
 
   .row--second {
     margin-top: 110px;
@@ -2158,9 +2172,6 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 750px) {
-  .home .sale {
-    margin-top: 565px;
-  }
 
   .metaverse .metaverse-slider .slick-next {
     left: 400px;
@@ -2180,9 +2191,23 @@ footer .footer-links a:first-child {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 705px) {
   .home .sale {
-    margin-top: 480px;
+    margin-top: -175px;
+  }
+}
+
+@media (max-width: 680px) {
+ 
+  .main-background-tablet{
+    margin-top: -75px;
+  }
+}
+
+@media (max-width: 650px) {
+
+   .home .sale {
+    margin-top: -155px;
   }
 
   .row--second .map img {
@@ -2356,11 +2381,6 @@ footer .footer-links a:first-child {
     margin-right: 22px;
   }
 
-  .main-background-tablet {
-    top: 200px;
-    left: -30px;
-  }
-
   .home {
     padding-top: 90px;
   }
@@ -2376,10 +2396,6 @@ footer .footer-links a:first-child {
     line-height: 19px;
   }
 
-  .home .sale {
-    margin-top: 430px;
-  }
-
   .home .sale h5:before {
     top: -27px;
     left: 55px;
@@ -2387,6 +2403,12 @@ footer .footer-links a:first-child {
 
   .home .sale h5:after {
     left: 94px;
+  }
+
+  .main-background-tablet {
+    width: 100%;
+    margin-left: -15px;
+    margin-top: -55px;
   }
 
   .metaverse .section-title {
@@ -2522,10 +2544,10 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 520px) {
-  .home .sale {
-    margin-top: 355px;
-  }
 
+  .home .sale {
+    margin-top: -115px;
+  }
   .game .statistics-wrapper {
     margin-top: 0px;
   }
@@ -2574,13 +2596,9 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 450px) {
-  .main-background-tablet {
-    top: 214px;
-    left: -23px;
-  }
 
   .home .sale {
-    margin-top: 300px;
+    margin-top: -100px;
     padding: 24px 5px;
   }
 
@@ -2630,8 +2648,12 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 405px) {
-  .home .sale {
-    margin-top: 250px;
+  .main-background-tablet{
+    margin-top: -40px;
+  }
+
+  .home .sale{
+    margin-top: -90px;
   }
 
   .home .sale .green-button {
@@ -2661,13 +2683,6 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 390px) {
-  .main-background-tablet {
-    top: 280px;
-  }
-
-  .home .sale {
-    margin-top: 270px;
-  }
 
   .home .sale .green-button {
     margin-top: -40px;
@@ -2679,16 +2694,12 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 370px) {
-  .main-background-tablet {
-    top: 335px;
+  .home .sale {
+    margin-top: -75px;
   }
 
   .home .sale .green-button {
     margin-top: -35px;
-  }
-
-  .home .sale {
-    margin-top: 235px;
   }
 
   .team .dev-card {
