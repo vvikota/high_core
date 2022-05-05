@@ -592,7 +592,7 @@ header .header-menu {
 .metaverse:after {
   position: absolute;
   content: "";
-  top: 720px;
+  top: 570px;
   left: 50%;
   display: block;
   width: 150px;
@@ -665,6 +665,14 @@ header .header-menu {
   background-repeat: no-repeat;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.metaverse .metaverse-slider .slick-next:focus,
+.metaverse .metaverse-slider .slick-next:focus,
+.metaverse .metaverse-slider .slick-prev:active,
+.metaverse .metaverse-slider .slick-prev:active {
+  outline: none;
 }
 
 .metaverse .metaverse-slider .slick-prev {
