@@ -59,6 +59,16 @@ html {
   overflow: hidden;
 }
 
+header,
+.page-content:before{
+  transition: top 0.5s ease-out;
+}
+
+.main-wrapper.hide-menu header,
+.main-wrapper.hide-menu .page-content:before{
+  top: -100px;
+}
+
 body.block-scroll {
   overflow: hidden;
 }
@@ -218,6 +228,7 @@ header {
   -ms-flex-pack: center;
   justify-content: center;
   position: fixed;
+  top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);

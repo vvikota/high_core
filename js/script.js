@@ -8,14 +8,18 @@ $(document).ready(function () {
   // header menu actions
   var lastId,
     topMenu = $(".header-menu"),
+    firstSection = $(".home"),
     topMenuHeight = topMenu.outerHeight() + 15,
-    menuItems = topMenu.find("a"),
-    scrollItems = menuItems.map(function () {
+    firstSectionHeight = firstSection.outerHeight()
+  ;(menuItems = topMenu.find("a")),
+    (scrollItems = menuItems.map(function () {
       var item = $($(this).attr("href"))
       if (item.length) {
         return item
       }
-    })
+    }))
+
+  // console.log(firstSectionHeight)
 
   menuItems.click(function (e) {
     var href = $(this).attr("href"),
@@ -28,6 +32,8 @@ $(document).ready(function () {
     )
     e.preventDefault()
   })
+
+  var scrollPos = 0
 
   $(window).scroll(function () {
     var fromTop = $(this).scrollTop() + topMenuHeight
@@ -49,6 +55,31 @@ $(document).ready(function () {
         .parent()
         .addClass("active")
     }
+
+    // console.log(fromTop)
+    // hide top menu
+    if ($(window).width() > 980) {
+      if (
+        fromTop > firstSectionHeight &&
+        !$(".main-wrapper").hasClass("hide-menu")
+      ) {
+        $(".main-wrapper").addClass("hide-menu")
+      } else if (
+        fromTop < firstSectionHeight &&
+        $(".main-wrapper").hasClass("hide-menu")
+      ) {
+        $(".main-wrapper").removeClass("hide-menu")
+      }
+
+      var st = $(this).scrollTop()
+      if (st > scrollPos) {
+        console.log("down")
+      } else {
+        // console.log("up")
+        $(".main-wrapper").hasClass("hide-menu") && $(".main-wrapper").removeClass("hide-menu")
+      }
+      scrollPos = st
+    }
   })
 
   // metaverse slider
@@ -57,22 +88,21 @@ $(document).ready(function () {
     const contentWidth = $(".wrapper").width()
     let nextArrowPosition
 
-    if(windowWidth > 820){
+    if (windowWidth > 820) {
       nextArrowPosition = contentWidth - 370
-    } else if (windowWidth < 820 && windowWidth > 620){
-      nextArrowPosition = contentWidth - 270 
-    } else if (windowWidth < 620){
-      nextArrowPosition = contentWidth - 135 
+    } else if (windowWidth < 820 && windowWidth > 620) {
+      nextArrowPosition = contentWidth - 270
+    } else if (windowWidth < 620) {
+      nextArrowPosition = contentWidth - 135
     }
 
     $(".metaverse-slider").width(windowWidth + 26)
 
-    if(windowWidth > 620){
+    if (windowWidth > 620) {
       $(".metaverse-slider").css("left", "0px")
     } else {
       $(".metaverse-slider").css("left", "50px")
     }
-
 
     $(".metaverse-slider .slick-next").css("left", nextArrowPosition + "px")
     $(".metaverse button.first-slide").css("left", nextArrowPosition + "px")
@@ -154,7 +184,7 @@ $(document).ready(function () {
     const bias = (windowWidth - contentWidth) / 2 + asideWidth
     $(".video-wrapper").width(windowWidth)
 
-    if(windowWidth > 620){
+    if (windowWidth > 620) {
       $(".video-wrapper").css("left", "-" + bias + "px")
     } else {
       $(".video-wrapper").css("left", "0")
@@ -189,7 +219,7 @@ $(document).ready(function () {
       if ($(".key-content").hasClass("slick-initialized")) {
         $(".key-content").slick("unslick")
       }
-    } else if (!$(".key-content").hasClass("slick-initialized")){
+    } else if (!$(".key-content").hasClass("slick-initialized")) {
       $(".key-content").slick({
         arrows: false,
         cssEase: "linear",
