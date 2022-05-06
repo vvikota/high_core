@@ -423,6 +423,7 @@ header .header-menu {
 
 .home {
   position: relative;
+  padding-top: 195px;
 }
 
 .home:after {
@@ -462,7 +463,7 @@ header .header-menu {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-top: 35px;
+  /* margin-top: 35px; */
   font-family: Gilroy, sans-serif;
   font-size: 13px;
   font-weight: 600;
@@ -1233,7 +1234,7 @@ header .header-menu {
     to(#2f2a34)
   );
   background: linear-gradient(180deg, #3a3540 0%, #2f2a34 100%);
-  border: 2px solid #ffda06;
+  /* border: 2px solid #ffda06; */
   border-radius: 26.5px;
 }
 
@@ -1842,16 +1843,16 @@ footer .footer-links a:first-child {
   }
 
   .home {
-    padding-top: 100px;
+    padding-top: 150px;
   }
 
   .home:after {
     display: none;
   }
 
-  .home .pre-title {
+  /* .home .pre-title {
     margin-top: 50px;
-  }
+  } */
 
   .home .sale {
     margin-top: -275px;
@@ -2424,7 +2425,7 @@ footer .footer-links a:first-child {
   }
 
   .home {
-    padding-top: 90px;
+    padding-top: 145px;
   }
 
   .home .pre-title {
