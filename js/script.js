@@ -19,8 +19,6 @@ $(document).ready(function () {
       }
     }))
 
-  // console.log(firstSectionHeight)
-
   menuItems.click(function (e) {
     var href = $(this).attr("href"),
       offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1
@@ -56,7 +54,6 @@ $(document).ready(function () {
         .addClass("active")
     }
 
-    // console.log(fromTop)
     // hide top menu
     if ($(window).width() > 980) {
       if (
@@ -72,12 +69,10 @@ $(document).ready(function () {
       }
 
       var st = $(this).scrollTop()
-      if (st > scrollPos) {
-        console.log("down")
-      } else {
-        // console.log("up")
+      if (st < scrollPos) {
         $(".main-wrapper").hasClass("hide-menu") && $(".main-wrapper").removeClass("hide-menu")
-      }
+      } 
+      
       scrollPos = st
     }
   })
