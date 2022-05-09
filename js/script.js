@@ -31,7 +31,7 @@ $(document).ready(function () {
     e.preventDefault()
   })
 
-  var scrollPos = 0
+  var scrollPrev = 0
 
   $(window).scroll(function () {
     var fromTop = $(this).scrollTop() + topMenuHeight
@@ -56,24 +56,15 @@ $(document).ready(function () {
 
     // hide top menu
     if ($(window).width() > 980) {
-      if (
-        fromTop > firstSectionHeight &&
-        !$(".main-wrapper").hasClass("hide-menu")
-      ) {
+
+      var scrolled = $(window).scrollTop()
+
+      if (scrolled > firstSectionHeight && scrolled > scrollPrev) {
         $(".main-wrapper").addClass("hide-menu")
-      } else if (
-        fromTop < firstSectionHeight &&
-        $(".main-wrapper").hasClass("hide-menu")
-      ) {
+      } else {
         $(".main-wrapper").removeClass("hide-menu")
       }
-
-      var st = $(this).scrollTop()
-      if (st < scrollPos) {
-        $(".main-wrapper").hasClass("hide-menu") && $(".main-wrapper").removeClass("hide-menu")
-      } 
-      
-      scrollPos = st
+      scrollPrev = scrolled
     }
   })
 
