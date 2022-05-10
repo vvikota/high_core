@@ -1006,30 +1006,6 @@ header .header-menu {
   border-radius: 24.537px;
 }
 
-.game .slider-row .slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 30px;
-}
-
-.game .slider-row .slick-dots span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  margin-right: 9px;
-  background-color: #545454;
-  border-radius: 15px;
-  -webkit-transition: 0.3s ease width;
-  -o-transition: 0.3s ease width;
-  transition: 0.3s ease width;
-}
-
-.game .slider-row .slick-dots .slick-active span {
-  width: 60px;
-  background-color: #ffda06;
-}
-
 .game .map-row {
   position: relative;
   display: -webkit-box;
@@ -1277,6 +1253,29 @@ header .header-menu {
   font-weight: 600;
   line-height: 27px;
   color: #ffffff;
+}
+
+.key .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.key .slick-dots span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-right: 9px;
+  background-color: #545454;
+  border-radius: 15px;
+  -webkit-transition: 0.3s ease width;
+  -o-transition: 0.3s ease width;
+  transition: 0.3s ease width;
+}
+
+.key .slick-dots .slick-active span {
+  width: 60px;
+  background-color: #ffda06;
 }
 
 .team {
@@ -2682,15 +2681,6 @@ footer .footer-links a:first-child {
   .game .features-item {
     margin-bottom: 30px;
     padding-right: 30px;
-  }
-
-  .game .slider-row .slick-dots span {
-    width: 6px;
-    height: 6px;
-  }
-
-  .game .slider-row .slick-dots .slick-active span {
-    width: 36px;
   }
 
   .partners .partner-wrapper {

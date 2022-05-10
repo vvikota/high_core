@@ -56,7 +56,6 @@ $(document).ready(function () {
 
     // hide top menu
     if ($(window).width() > 980) {
-
       var scrolled = $(window).scrollTop()
 
       if (scrolled > firstSectionHeight && scrolled > scrollPrev) {
@@ -134,10 +133,10 @@ $(document).ready(function () {
     autoplaySpeed: 0,
     speed: 3000,
     variableWidth: true,
-    dots: true,
-    customPaging: function (slick, index) {
-      return "<span></span>"
-    },
+    // dots: true,
+    // customPaging: function (slick, index) {
+    //   return "<span></span>"
+    // },
   })
 
   // map animation
@@ -213,6 +212,10 @@ $(document).ready(function () {
         autoplaySpeed: 0,
         speed: 3000,
         variableWidth: true,
+        dots: true,
+        customPaging: function (slick, index) {
+          return "<span></span>"
+        },
       })
     }
   })
