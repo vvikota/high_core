@@ -982,6 +982,7 @@ header .header-menu {
 
 .game .tank-slider {
   z-index: 2;
+  pointer-events: none;
 }
 
 .game .slider-title {
