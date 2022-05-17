@@ -26,7 +26,6 @@ $(document).ready(function () {
       windowWidth = $(window).width(),
       remains = windowWidth > 620 ? 0 : -50,
       offsetTop = href === "#" ? 0 : $(href).offset().top + remains;
-      // console.log(remains, offsetTop, $(href).offset().top)  
 
     $("html, body").stop().animate(
       {
@@ -155,13 +154,14 @@ $(document).ready(function () {
     }
   })
 
-  // video action
-  const videoPosition = $(".video").offset().top,
-        videoHeight = $(".video").height();
-
-
   $(document).on("scroll", function () {
-    var scroll = $(document).scrollTop()
+    var videoHeight = $(".video").height(),
+        scroll = $(document).scrollTop(),
+        windowWidth = $(window).width(),
+        remains = windowWidth > 620 ? 0 : -100,
+        videoPosition = $(".video").offset().top + remains;
+
+    // console.log(videoPosition, videoHeight, scroll)
     if (scroll > videoPosition && scroll < videoPosition + videoHeight) {
       $(".video-wrapper video")[0].play()
     }
