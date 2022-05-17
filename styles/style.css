@@ -1145,7 +1145,6 @@ header .header-menu {
 
 .video {
   position: relative;
-  padding-top: 115px;
   padding-right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1200,10 +1199,8 @@ header .header-menu {
 }
 
 .key {
-  margin-top: 140px;
-  padding-top: 25px;
   background: url("../media/img/key_features_background.png");
-  background-position: -50px 50px;
+  background-position: -50px 250px;
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -1278,10 +1275,6 @@ header .header-menu {
 .key .slick-dots .slick-active span {
   width: 60px;
   background-color: #ffda06;
-}
-
-.team {
-  padding-top: 130px;
 }
 
 .team .section-title {
@@ -1697,10 +1690,6 @@ footer .footer-links a:first-child {
     padding-bottom: 50px;
   }
 
-  section.team {
-    padding-top: 70px;
-  }
-
   .key .key-content {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
@@ -1880,12 +1869,7 @@ footer .footer-links a:first-child {
   }
 
   section.metaverse {
-    padding-top: 100px;
     padding-bottom: 50px;
-  }
-
-  section.game {
-    padding-top: 100px;
   }
 
   .game .row--with-border .map img {
@@ -2177,9 +2161,6 @@ footer .footer-links a:first-child {
   section.game {
     padding-bottom: 50px;
   }
-  section.video {
-    padding-top: 50px;
-  }
 
   .video .video-wrapper {
     top: 50px;
@@ -2198,16 +2179,8 @@ footer .footer-links a:first-child {
     padding-bottom: 50px;
   }
 
-  section.roadmap {
-    padding-top: 80px;
-  }
-
   .roadmap .section-title .selection {
     margin-left: -15px;
-  }
-
-  section.partners {
-    padding-top: 50px;
   }
 
   .partners .partner-wrapper img {
@@ -2432,6 +2405,7 @@ footer .footer-links a:first-child {
   }
 
   section {
+    padding-top: 50px;
     padding-left: 18px;
     padding-right: 22px;
   }
@@ -2543,10 +2517,6 @@ footer .footer-links a:first-child {
     width: 55px;
     height: 55px;
     background-size: 51px 51px;
-  }
-
-  section.game {
-    padding-top: 50px;
   }
 
   .game .section-title {

@@ -9,9 +9,9 @@ $(document).ready(function () {
   var lastId,
     topMenu = $(".header-menu"),
     firstSection = $(".home"),
-    topMenuHeight = topMenu.outerHeight() + 15,
-    firstSectionHeight = firstSection.outerHeight()
-  ;(menuItems = topMenu.find("a")),
+    topMenuHeight = 100,
+    firstSectionHeight = firstSection.outerHeight();
+    (menuItems = topMenu.find("a")),
     (scrollItems = menuItems.map(function () {
       var item = $($(this).attr("href"))
       if (item.length) {
@@ -19,9 +19,15 @@ $(document).ready(function () {
       }
     }))
 
+    // console.log(topMenuHeight)
+
   menuItems.click(function (e) {
     var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1
+      windowWidth = $(window).width(),
+      remains = windowWidth > 620 ? 0 : -80,
+      offsetTop = href === "#" ? 0 : $(href).offset().top + remains;
+      // console.log(offsetTop)  
+
     $("html, body").stop().animate(
       {
         scrollTop: offsetTop,
@@ -151,7 +157,9 @@ $(document).ready(function () {
 
   // video action
   const videoPosition = $(".video").offset().top,
-    videoHeight = $(".video").height()
+        videoHeight = $(".video").height();
+
+
   $(document).on("scroll", function () {
     var scroll = $(document).scrollTop()
     if (scroll > videoPosition && scroll < videoPosition + videoHeight) {
