@@ -24,9 +24,9 @@ $(document).ready(function () {
   menuItems.click(function (e) {
     var href = $(this).attr("href"),
       windowWidth = $(window).width(),
-      remains = windowWidth > 620 ? 0 : -80,
+      remains = windowWidth > 620 ? 0 : -50,
       offsetTop = href === "#" ? 0 : $(href).offset().top + remains;
-      // console.log(offsetTop)  
+      // console.log(remains, offsetTop, $(href).offset().top)  
 
     $("html, body").stop().animate(
       {
