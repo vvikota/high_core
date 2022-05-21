@@ -19,8 +19,6 @@ $(document).ready(function () {
       }
     }))
 
-    // console.log(topMenuHeight)
-
   menuItems.click(function (e) {
     var href = $(this).attr("href"),
       windowWidth = $(window).width(),
@@ -138,6 +136,7 @@ $(document).ready(function () {
     autoplaySpeed: 0,
     speed: 3000,
     variableWidth: true,
+    swipe: true
     // dots: true,
     // customPaging: function (slick, index) {
     //   return "<span></span>"
@@ -215,12 +214,11 @@ $(document).ready(function () {
     } else if (!$(".key-content").hasClass("slick-initialized")) {
       $(".key-content").slick({
         arrows: false,
-        cssEase: "linear",
         autoplay: true,
-        autoplaySpeed: 0,
-        speed: 3000,
+        speed: 1000,
         variableWidth: true,
         dots: true,
+        swipe: true,
         customPaging: function (slick, index) {
           return "<span></span>"
         },

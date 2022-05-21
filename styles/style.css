@@ -1010,7 +1010,6 @@ header .header-menu {
 
 .game .tank-slider {
   z-index: 2;
-  pointer-events: none;
 }
 
 .game .slider-title {
@@ -1219,7 +1218,7 @@ header .header-menu {
   font-weight: 700;
   line-height: 40px;
   color: #ccc3d6;
-  z-index: 3;
+  z-index: 5;
 }
 
 .video p .selection-text {
@@ -1286,6 +1285,7 @@ header .header-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
 }
 
 .key .slick-dots span {
@@ -1295,13 +1295,14 @@ header .header-menu {
   margin-right: 9px;
   background-color: #545454;
   border-radius: 15px;
-  -webkit-transition: 0.3s ease width;
+  /* -webkit-transition: 0.3s ease width;
   -o-transition: 0.3s ease width;
-  transition: 0.3s ease width;
+  transition: 0.3s ease width; */
 }
 
 .key .slick-dots .slick-active span {
-  width: 60px;
+  width: 20px;
+  height: 20px;
   background-color: #ffda06;
 }
 
