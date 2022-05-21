@@ -2260,6 +2260,19 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 750px) {
+  header{
+    padding-top: 11px;
+    padding-bottom: 11px; 
+  }
+
+  .page-content:before{
+    height: 81px;
+  }
+
+  .green-button--fixed{
+    top: 16px;
+  }
+
   .metaverse .metaverse-slider .slick-next {
     left: 400px;
   }
@@ -2619,19 +2632,18 @@ footer .footer-links a:first-child {
 
 @media (max-width: 520px) {
 
-  
-  .page-content:before {
-    height: 90px;
-  }
-
   header{
-    padding-top: 20px;
+    height: 81px;
   }
 
   header .header-content{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .green-button--fixed{
+    top: 21px;
   }
 
   .header-content .logo{
