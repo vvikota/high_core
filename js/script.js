@@ -215,6 +215,7 @@ $(document).ready(function () {
       $(".key-content").slick({
         arrows: false,
         autoplay: true,
+        autoplaySpeed: 1500,
         speed: 1000,
         variableWidth: true,
         dots: true,
