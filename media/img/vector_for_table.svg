@@ -1,9 +1,1 @@
-<svg width="586" height="388" viewBox="0 0 586 388" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M290.819 38.4601C221.823 48.6614 58.3987 125.115 18.2434 204.299C-43.7775 326.6 74.5965 425.578 309.701 369.558C544.806 313.537 623.355 171.67 566.155 77.9628C509.708 -14.5108 327.719 -7.03376 208.305 20.579" stroke="url(#paint0_linear_566_3711)" stroke-width="3"/>
-<defs>
-<linearGradient id="paint0_linear_566_3711" x1="350.5" y1="-68.5" x2="159" y2="493.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFFCEB"/>
-<stop offset="1" stop-color="#FFFCEB" stop-opacity="0"/>
-</linearGradient>
-</defs>
-</svg>
+<svg fill="none" height="388" viewBox="0 0 586 388" width="586" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="350.5" x2="159" y1="-68.5" y2="493.5"><stop offset="0" stop-color="#fffceb"/><stop offset="1" stop-color="#fffceb" stop-opacity="0"/></linearGradient><path d="m290.819 38.4601c-68.996 10.2013-232.4203 86.6549-272.5756 165.8389-62.0209 122.301 56.3531 221.279 291.4576 165.259 235.105-56.021 313.654-197.888 256.454-291.5952-56.447-92.4736-238.436-84.99656-357.85-57.3838" stroke="url(#a)" stroke-width="3"/></svg>
