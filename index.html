@@ -21,8 +21,6 @@
   <div class="main-wrapper">
     
     <div class="main-background-wrapper">
-      <video src="./media/video/video_background.mp4" autoplay muted loop class="main-background"
-        poster="./media/img/frame-2.png"></video>
       <div class="main_background_shadow"></div>
     </div>
 
@@ -308,7 +306,11 @@
           <div class="map-row row--with-border">
             <div class="map">
               <h5>Solo Deathmatch</h5>
-              <img src="./media/img/map_pic1.png" alt="map">
+              <picture>
+                <source srcset="./media/img/webP/map_pic1.webp" type="image/webp">
+                <source srcset="./media/img/map_pic1.png" type="image/png"> 
+                <img src="./media/img/map_pic1.png" alt="pic">
+              </picture>
             </div>
             <div class="map-description">
               <ul>
@@ -327,7 +329,11 @@
           <div class="map-row row--second">
             <div class="map">
               <h5>Battle Royale</h5>
-              <img src="./media/img/map_pic2.png" alt="map">
+              <picture>
+                <source srcset="./media/img/webP/map_pic2.webp" type="image/webp">
+                <source srcset="./media/img/map_pic2.png" type="image/png"> 
+                <img src="./media/img/map_pic2.png" alt="pic">
+              </picture>
             </div>
             <div class="map-description">
               <ul>

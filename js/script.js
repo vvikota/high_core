@@ -227,26 +227,15 @@ $(document).ready(function () {
     }
   })
 
-  // set images size
-  // $(window).on("load resize orientationchange", function () {
-  //   if ($(window).width() < 1150) {
-  //     // const parentWidth = $(".home").width();
-  //     const imgWidthCSS = $(".main-background-tablet").css("width").slice(0, -2);
-  //     const imgHeight = +imgWidthCSS / 870 * 950;
-  //     // console.log(imgHeight)
-  //     $(".main-background-tablet").css("height", imgHeight + "px")
-  //   }
-  // })
-
   // main video-background script
-  // $(window).on("load resize orientationchange", function () {
-  //   const video = `<video src="./media/video/video_background.mp4" autoplay muted loop class="main-background"
-  //   poster="./media/img/frame-2.png"></video>`;
+  $(window).on("load resize orientationchange", function () {
+    const video = `<video src="./media/video/video_background.mp4" autoplay muted loop class="main-background"
+    poster="./media/img/frame-2.png"></video>`;
 
-  //   const videoContainer = $(".main-background-wrapper");
+    const videoContainer = $(".main-background-wrapper");
 
-  //   if ($(window).width() > 1150) {
-  //     $(videoContainer).append(video)
-  //   }
-  // })
+    if ($(window).width() > 1150) {
+      $(videoContainer).append(video)
+    }
+  })
 })
