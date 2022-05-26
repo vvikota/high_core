@@ -11,12 +11,10 @@ $(document).ready(function () {
     firstSection = $(".home"),
     topMenuHeight = 100,
     firstSectionHeight = firstSection.outerHeight();
-    (menuItems = topMenu.find("a")),
+    (menuItems = topMenu.find("a.scroll-item-js")),
     (scrollItems = menuItems.map(function () {
       var item = $($(this).attr("href"))
-      if (item.length) {
-        return item
-      }
+      if (item.length) { return item }
     }))
 
   menuItems.click(function (e) {
