@@ -18,6 +18,7 @@ $(document).ready(function () {
     }))
 
   menuItems.click(function (e) {
+    console.log("clikc")
     var href = $(this).attr("href"),
       windowWidth = $(window).width(),
       remains = windowWidth > 620 ? 0 : -50,
