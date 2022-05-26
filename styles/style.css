@@ -1874,11 +1874,15 @@ footer .footer-links a:first-child {
   }
 
   .main-background-tablet {
-    display: block;
     width: 120%;
-    max-width: initial;
+    display: block;
     margin-top: -100px;
     margin-left: -100px;
+  }
+  
+  .main-background-tablet img{
+    width: 100%;
+    max-width: initial;
   }
 
   .home {
