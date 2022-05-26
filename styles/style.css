@@ -1894,7 +1894,7 @@ footer .footer-links a:first-child {
   }
 
   .home .sale {
-    margin-top: -275px;
+    margin-top: -175px;
   }
 
   section.home {
@@ -2137,10 +2137,6 @@ footer .footer-links a:first-child {
     padding-right: 0;
   }
 
-  .home .sale {
-    margin-top: -250px;
-  }
-
   .metaverse .section-title .tail {
     margin-left: -16px;
   }
@@ -2243,7 +2239,7 @@ footer .footer-links a:first-child {
   }
 
   .home .sale {
-    margin-top: -210px;
+    margin-top: -150px;
   }
 
   .row--second {
@@ -2298,7 +2294,7 @@ footer .footer-links a:first-child {
 
 @media (max-width: 705px) {
   .home .sale {
-    margin-top: -175px;
+    margin-top: -120px;
   }
 
   .burger-menu {
@@ -2358,7 +2354,7 @@ footer .footer-links a:first-child {
 
 @media (max-width: 650px) {
   .home .sale {
-    margin-top: -155px;
+    margin-top: -110px;
   }
 
   .row--second .map img {
@@ -2675,7 +2671,7 @@ footer .footer-links a:first-child {
   }
 
   .home .sale {
-    margin-top: -115px;
+    margin-top: -80px;
   }
   .game .statistics-wrapper {
     margin-top: 0px;
@@ -2717,7 +2713,7 @@ footer .footer-links a:first-child {
 
 @media (max-width: 450px) {
   .home .sale {
-    margin-top: -100px;
+    margin-top: -70px;
     padding: 24px 5px;
   }
 
@@ -2772,7 +2768,7 @@ footer .footer-links a:first-child {
   }
 
   .home .sale {
-    margin-top: -90px;
+    margin-top: -65px;
   }
 
   .home .sale .green-button {
@@ -2813,7 +2809,7 @@ footer .footer-links a:first-child {
 
 @media (max-width: 370px) {
   .home .sale {
-    margin-top: -75px;
+    margin-top: -55px;
   }
 
   .home .sale .green-button {

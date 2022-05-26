@@ -227,8 +227,7 @@ $(document).ready(function () {
 
   // main video-background script
   $(window).on("load resize orientationchange", function () {
-    const video = `<video src="./media/video/video_background.mp4" autoplay muted loop class="main-background"
-    poster="./media/img/frame-2.png"></video>`;
+    const video = `<video src="./media/video/video_background.mp4" autoplay muted loop class="main-background"></video>`;
 
     const videoContainer = $(".main-background-wrapper");
 
