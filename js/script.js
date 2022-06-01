@@ -5,6 +5,7 @@ const variables = {
 }
 
 $(document).ready(function () {
+
   // header menu actions
   var lastId,
     topMenu = $(".header-menu"),
@@ -18,7 +19,6 @@ $(document).ready(function () {
     }))
 
   menuItems.click(function (e) {
-    console.log("clikc")
     var href = $(this).attr("href"),
       windowWidth = $(window).width(),
       remains = windowWidth > 620 ? 0 : -50,
@@ -46,6 +46,8 @@ $(document).ready(function () {
 
     if (lastId !== id) {
       lastId = id
+
+      history.pushState(null, null, '/#' + lastId);
 
       menuItems
         .parent()
@@ -136,10 +138,6 @@ $(document).ready(function () {
     speed: 3000,
     variableWidth: true,
     swipe: true
-    // dots: true,
-    // customPaging: function (slick, index) {
-    //   return "<span></span>"
-    // },
   })
 
   // map animation
@@ -159,7 +157,6 @@ $(document).ready(function () {
         remains = windowWidth > 620 ? 0 : -100,
         videoPosition = $(".video").offset().top + remains;
 
-    // console.log(videoPosition, videoHeight, scroll)
     if (scroll > videoPosition && scroll < videoPosition + videoHeight) {
       $(".video-wrapper video")[0].play()
     }
