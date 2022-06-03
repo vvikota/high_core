@@ -229,7 +229,7 @@ $(document).ready(function () {
 
     const videoContainer = $(".main-background-wrapper");
 
-    if ($(window).width() > 1150) {
+    if ($(window).width() > 1150 && !$(".main-background").length) {
       $(videoContainer).append(video)
     }
   })
