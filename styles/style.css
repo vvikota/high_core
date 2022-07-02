@@ -838,6 +838,10 @@ header .header-menu {
   left: -77px;
 }
 
+.game{
+  margin-top: 80px;
+}
+
 .game .section-title {
   margin-bottom: 50px;
 }
@@ -1035,7 +1039,7 @@ header .header-menu {
   border-radius: 24.537px;
 }
 
-.game .map-row {
+.metaverse .map-row {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1050,7 +1054,7 @@ header .header-menu {
   margin-bottom: 20px;
 }
 
-.game .map h5 {
+.metaverse .map h5 {
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
@@ -1086,7 +1090,7 @@ header .header-menu {
   background-color: #000000;
 }
 
-.game .map-row .map {
+.metaverse .map-row .map {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1100,7 +1104,7 @@ header .header-menu {
   width: 100%;
 }
 
-.game .map-row .map img {
+.metaverse .map-row .map img {
   position: relative;
   z-index: 2;
   margin-top: -30px;
@@ -1114,24 +1118,24 @@ header .header-menu {
   max-width: 960px;
 }
 
-.game .row--with-border .map img {
+.metaverse .row--with-border .map img {
   margin-top: -120px;
 }
 
-.game .row--with-border .map-description {
+.metaverse .row--with-border .map-description {
   margin-top: -60px;
 }
 
-.game .map-description {
+.metaverse .map-description {
   width: 100%;
   margin-top: 20px;
 }
 
-.game .map-description h5 {
+.metaverse .map-description h5 {
   margin-bottom: 25px;
 }
 
-.game .map-description ul {
+.metaverse .map-description ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1142,11 +1146,11 @@ header .header-menu {
   list-style: none;
 }
 
-.game .map-description ul div {
+.metaverse .map-description ul div {
   width: 50%;
 }
 
-.game .map-description li {
+.metaverse .map-description li {
   position: relative;
   margin-bottom: 15px;
   padding-left: 18px;
@@ -1158,7 +1162,7 @@ header .header-menu {
   white-space: nowrap;
 }
 
-.game .map-description li:before {
+.metaverse .map-description li:before {
   position: absolute;
   content: "";
   display: block;
@@ -1795,7 +1799,7 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 1250px) {
-  .game .map-description ul {
+  .metaverse .map-description ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1905,12 +1909,16 @@ footer .footer-links a:first-child {
     padding-bottom: 50px;
   }
 
-  .game .row--with-border .map img {
+  .metaverse .row--with-border .map img {
     margin-top: -70px;
   }
 
   .row--second .map img {
     max-width: 800px;
+  }
+
+  .game{
+    margin-top: 0;
   }
 
   .game .features-row {
@@ -2177,7 +2185,7 @@ footer .footer-links a:first-child {
     box-shadow: 0 0 250px 200px rgb(0 132 254 / 16%);
   }
 
-  .game .row--with-border .map-description {
+  .metaverse .row--with-border .map-description {
     margin-top: -20px;
   }
 
@@ -2251,11 +2259,11 @@ footer .footer-links a:first-child {
     margin-top: -10px;
   }
 
-  .game .map-description ul div {
+  .metaverse .map-description ul div {
     width: 100%;
   }
 
-  .game .map-description li {
+  .metaverse .map-description li {
     white-space: normal;
   }
 }
@@ -2375,17 +2383,17 @@ footer .footer-links a:first-child {
     margin-top: 130px;
   }
 
-  .game .row--with-border .map img {
+  .metaverse .row--with-border .map img {
     margin-top: -50px;
   }
 
-  .game .map-description li {
+  .metaverse .map-description li {
     margin-bottom: 5px;
     font-size: 12px;
     line-height: 18px;
   }
 
-  .game .map-description li:before {
+  .metaverse .map-description li:before {
     top: 6px;
     width: 5px;
     height: 5px;
@@ -2580,11 +2588,11 @@ footer .footer-links a:first-child {
     max-width: 350px;
   }
 
-  .game .map-ro.w .map img {
+  .metaverse .map-row .map img {
     margin-top: 0px;
   }
 
-  .game .row--with-border .map img {
+  .metaverse .row--with-border .map img {
     margin-top: -50px;
   }
 
@@ -2783,12 +2791,12 @@ footer .footer-links a:first-child {
     max-width: 330px;
   }
 
-  .game .row--with-border .map img {
+  .metaverse .row--with-border .map img {
     width: 405px;
     max-width: initial;
   }
 
-  .game .map-description {
+  .metaverse .map-description {
     margin-top: 0;
   }
 
