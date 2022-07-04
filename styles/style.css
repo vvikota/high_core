@@ -223,7 +223,16 @@ body.block-scroll .page-content {
 .logo {
   position: relative;
   width: 65px;
+  height: 55px;
   margin-left: 20px;
+}
+
+
+.logo img{
+  width: 95px;
+  max-width: fit-content;
+  margin-top: -14px;
+  margin-left: -11px;
 }
 
 .logo:before,
@@ -2662,10 +2671,6 @@ footer .footer-links a:first-child {
   .header-content .logo{
     width: 55px;
     margin-left: 18px;
-  }
-
-  .burger-menu .logo img{
-    width: 55px;
   }
 
   .burger-menu .mobile-top{
