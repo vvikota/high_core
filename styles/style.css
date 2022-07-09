@@ -1208,6 +1208,15 @@ section.metaverse{
   z-index: 4;
 }
 
+.social-link-mask{
+  position: absolute;
+  left: 35px;
+  display: block;
+  width: 40px;
+  height: 220px;
+  background: #242028;
+}
+
 .video .video-wrapper:after {
   content: "";
   position: absolute;
@@ -1229,6 +1238,7 @@ section.metaverse{
 
 .video p {
   position: relative;
+  top: 200px;
   max-width: 795px;
   font-family: Gilroy, sans-serif;
   font-size: 36px;
@@ -1236,6 +1246,11 @@ section.metaverse{
   line-height: 40px;
   color: #ccc3d6;
   z-index: 5;
+  transition: 0.5s ease all;
+}
+
+.video.show-text p{
+  top: -70px;
 }
 
 .video p .selection-text {
@@ -2581,6 +2596,10 @@ footer .footer-links a:first-child {
     width: 55px;
     height: 55px;
     background-size: 51px 51px;
+  }
+
+  .video p{
+    top: 0px;
   }
 
   .game .section-title {

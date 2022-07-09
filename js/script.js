@@ -19,10 +19,18 @@ $(document).ready(function () {
     }))
 
   menuItems.click(function (e) {
-    var href = $(this).attr("href"),
-      windowWidth = $(window).width(),
-      remains = windowWidth > 620 ? 0 : -50,
-      offsetTop = href === "#" ? 0 : $(href).offset().top + remains;
+    var href = $(this).attr("href");
+    var windowWidth = $(window).width();
+    var remains;
+
+    if(href === '#video'){
+      remains = windowWidth > 620 ? 120 : -30;
+    } else {
+      remains = windowWidth > 620 ? 0 : -50;
+    }
+
+    var offsetTop = href === "#" ? 0 : $(href).offset().top + remains;
+ 
 
     $("html, body").stop().animate(
       {
@@ -30,6 +38,7 @@ $(document).ready(function () {
       },
       300
     )
+    
     e.preventDefault()
   })
 
@@ -150,17 +159,26 @@ $(document).ready(function () {
     }
   })
 
+  // video
   $(document).on("scroll", function () {
     var videoHeight = $(".video").height(),
         scroll = $(document).scrollTop(),
         windowWidth = $(window).width(),
         remains = windowWidth > 620 ? 0 : -100,
         videoPosition = $(".video").offset().top + remains;
-
+        
     if (scroll > videoPosition && scroll < videoPosition + videoHeight) {
       $(".video-wrapper video")[0].play()
     }
+        
+    // parallax for video text
+    if (scroll > videoPosition + 150 && windowWidth > 620) {
+      $(".video").addClass("show-text")
+    } else (
+      $(".video").removeClass("show-text")
+    )
   })
+
 
   function videoResize() {
     const windowWidth = $(window).width()
@@ -225,7 +243,8 @@ $(document).ready(function () {
 
   // main video-background script
   $(window).on("load resize orientationchange", function () {
-    const video = `<video src="./media/video/video_background.mp4" autoplay muted loop class="main-background"></video>`;
+    const video =
+      `<video src="./media/video/video_background.mp4" autoplay muted loop class="main-background"></video>`;
 
     const videoContainer = $(".main-background-wrapper");
 
