@@ -23,15 +23,14 @@ $(document).ready(function () {
     var windowWidth = $(window).width();
     var remains;
 
-    if(href === '#video'){
-      remains = windowWidth > 620 ? 120 : -30;
+    if(href === '#metaverse'){
+      remains = windowWidth > 978 ? 0 : -70;
     } else {
-      remains = windowWidth > 620 ? 0 : -50;
+      remains = windowWidth > 978 ? 120 : -50;
     }
 
     var offsetTop = href === "#" ? 0 : $(href).offset().top + remains;
  
-
     $("html, body").stop().animate(
       {
         scrollTop: offsetTop,
