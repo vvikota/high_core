@@ -1212,7 +1212,8 @@ section.metaverse{
   position: absolute;
   left: 35px;
   display: block;
-  width: 40px;
+  width: 80px;
+  height: 220px;
   height: 220px;
   background: #242028;
 }

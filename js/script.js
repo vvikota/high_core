@@ -26,10 +26,11 @@ $(document).ready(function () {
     if(href === '#metaverse'){
       remains = windowWidth > 978 ? 0 : -70;
     } else {
-      remains = windowWidth > 978 ? 120 : -50;
+      remains = windowWidth > 978 ? 50 : -50;
     }
 
     var offsetTop = href === "#" ? 0 : $(href).offset().top + remains;
+    $(".main-wrapper").addClass("show-menu");
  
     $("html, body").stop().animate(
       {
@@ -37,6 +38,8 @@ $(document).ready(function () {
       },
       300
     )
+
+    setTimeout(() => $(".main-wrapper").removeClass("show-menu"), 350)
     
     e.preventDefault()
   })
@@ -70,8 +73,8 @@ $(document).ready(function () {
     if ($(window).width() > 980) {
       var scrolled = $(window).scrollTop()
 
-      if (scrolled > firstSectionHeight && scrolled > scrollPrev) {
-        $(".main-wrapper").addClass("hide-menu")
+      if (scrolled > firstSectionHeight && scrolled > scrollPrev && !$(".main-wrapper").hasClass("show-menu")) {
+        $(".main-wrapper").addClass("hide-menu");
       } else {
         $(".main-wrapper").removeClass("hide-menu")
       }
@@ -196,6 +199,10 @@ $(document).ready(function () {
     }
 
     $(".video").outerHeight(videoSectionHeight + videoContentHeight + 100)
+
+    const maskBias = (windowWidth - contentWidth) / 2 + 10
+
+    $(".social-link-mask").css("left", maskBias + "px")
   }
 
   videoResize()
