@@ -52,7 +52,7 @@
 }
 
 section {
-  padding: 165px 80px 100px 80px;
+  padding: 165px 80px 200px 80px;
 }
 
 h2 {
@@ -653,31 +653,9 @@ header .header-menu {
 }
 
 .home .sale h5 {
-  position: relative;
   margin-top: 10px;
   margin-bottom: 19px;
-  padding-right: 90px;
-}
-
-.home .sale h5:before {
-  position: absolute;
-  top: -23px;
-  left: 75px;
-  content: "";
-  display: block;
-  width: 115px;
-  height: 100px;
-  background-image: url("../media/img/sale_tooltip.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.home .sale h5:after {
-  position: absolute;
-  top: 0px;
-  left: 107px;
-  content: "sale";
-  display: block;
+  color: #ffda06;
 }
 
 .home .sale .green-button {
@@ -687,6 +665,7 @@ header .header-menu {
 .metaverse {
   position: relative;
   padding-right: 0;
+  padding-bottom: 100px;
 }
 
 section.metaverse{
@@ -696,12 +675,12 @@ section.metaverse{
 .metaverse:after {
   position: absolute;
   content: "";
-  top: 570px;
+  top: 420px;
   left: 50%;
   display: block;
   width: 150px;
   height: 1px;
-  -webkit-box-shadow: 0 0 500px 400px rgba(216, 133, 143, 0.2);
+  -webkit-box-shadow: 0 0 500px 300px rgba(216, 133, 143, 0.2);
   box-shadow: 0 0 500px 400px rgba(216, 133, 143, 0.2);
   z-index: 1;
   border-radius: 50%;
@@ -730,7 +709,7 @@ section.metaverse{
 
 .metaverse .slider-wrapper {
   position: relative;
-  height: 550px;
+  height: 400px;
 }
 
 .metaverse .metaverse-slider {
@@ -815,11 +794,35 @@ section.metaverse{
   justify-content: space-between;
   padding-left: 60px;
   padding-right: 60px;
+  width: 650px;
 }
 
 .metaverse .slide .img-wrapper {
   position: relative;
+  max-width: 100%;
   padding-top: 30px;
+}
+
+.metaverse .slide .img-wrapper picture{
+  position: relative;
+}
+
+.metaverse .slide .img-wrapper picture:after {
+  position: absolute;
+  content: '';
+  top: -5px;
+  left: -8px;
+  width: 104%;
+  height: 104%;
+  background-image: url('../media/img/iPad Pro.png');
+  background-size: 100% 100%;
+
+  -webkit-transform: rotate(6.2deg);
+  -ms-transform: rotate(6.2deg);
+  transform: rotate(6.2deg);
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .metaverse .slide .img-wrapper .slide-pic {
@@ -831,7 +834,8 @@ section.metaverse{
   transition: all 0.3s ease-out;
 }
 
-.metaverse .slide.rotate .img-wrapper .slide-pic {
+.metaverse .slide.rotate .img-wrapper .slide-pic,
+.metaverse .slide.rotate .img-wrapper picture:after{
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
@@ -842,17 +846,20 @@ section.metaverse{
 }
 
 .metaverse .metaverse-slider .slide-icon.icon--bottom {
-  top: calc(100% - 190px);
+  top: calc(100% - 140px);
   left: -85px;
+  width: 35%;
 }
 
 .metaverse .metaverse-slider .slide-icon.icon--top {
   top: -34px;
   left: -77px;
+  width: 25%;
 }
 
 .game{
   margin-top: 80px;
+  padding-top: 100px;
 }
 
 .game .section-title {
@@ -1052,7 +1059,7 @@ section.metaverse{
   border-radius: 24.537px;
 }
 
-.metaverse .map-row {
+.game .map-row {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1067,7 +1074,7 @@ section.metaverse{
   margin-bottom: 20px;
 }
 
-.metaverse .map h5 {
+.game .map h5 {
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
@@ -1103,7 +1110,7 @@ section.metaverse{
   background-color: #000000;
 }
 
-.metaverse .map-row .map {
+.game .map-row .map {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1117,7 +1124,7 @@ section.metaverse{
   width: 100%;
 }
 
-.metaverse .map-row .map img {
+.game .map-row .map img {
   position: relative;
   z-index: 2;
   margin-top: -30px;
@@ -1131,24 +1138,24 @@ section.metaverse{
   max-width: 960px;
 }
 
-.metaverse .row--with-border .map img {
+.game .row--with-border .map img {
   margin-top: -120px;
 }
 
-.metaverse .row--with-border .map-description {
+.game .row--with-border .map-description {
   margin-top: -60px;
 }
 
-.metaverse .map-description {
+.game .map-description {
   width: 100%;
   margin-top: 20px;
 }
 
-.metaverse .map-description h5 {
+.game .map-description h5 {
   margin-bottom: 25px;
 }
 
-.metaverse .map-description ul {
+.game .map-description ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1159,11 +1166,11 @@ section.metaverse{
   list-style: none;
 }
 
-.metaverse .map-description ul div {
+.game .map-description ul div {
   width: 50%;
 }
 
-.metaverse .map-description li {
+.game .map-description li {
   position: relative;
   margin-bottom: 15px;
   padding-left: 18px;
@@ -1175,7 +1182,7 @@ section.metaverse{
   white-space: nowrap;
 }
 
-.metaverse .map-description li:before {
+.game .map-description li:before {
   position: absolute;
   content: "";
   display: block;
@@ -1828,7 +1835,7 @@ footer .footer-links a:first-child {
 }
 
 @media (max-width: 1250px) {
-  .metaverse .map-description ul {
+  .game .map-description ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1938,7 +1945,7 @@ footer .footer-links a:first-child {
     padding-bottom: 50px;
   }
 
-  .metaverse .row--with-border .map img {
+  .game .row--with-border .map img {
     margin-top: -70px;
   }
 
@@ -2292,11 +2299,11 @@ footer .footer-links a:first-child {
     margin-top: -10px;
   }
 
-  .metaverse .map-description ul div {
+  .game .map-description ul div {
     width: 100%;
   }
 
-  .metaverse .map-description li {
+  .game .map-description li {
     white-space: normal;
   }
 }
@@ -2416,17 +2423,17 @@ footer .footer-links a:first-child {
     margin-top: 130px;
   }
 
-  .metaverse .row--with-border .map img {
+  .game .row--with-border .map img {
     margin-top: -50px;
   }
 
-  .metaverse .map-description li {
+  .game .map-description li {
     margin-bottom: 5px;
     font-size: 12px;
     line-height: 18px;
   }
 
-  .metaverse .map-description li:before {
+  .game .map-description li:before {
     top: 6px;
     width: 5px;
     height: 5px;
@@ -2621,11 +2628,11 @@ footer .footer-links a:first-child {
     max-width: 350px;
   }
 
-  .metaverse .map-row .map img {
+  .game .map-row .map img {
     margin-top: 0px;
   }
 
-  .metaverse .row--with-border .map img {
+  .game .row--with-border .map img {
     margin-top: -50px;
   }
 
@@ -2820,12 +2827,12 @@ footer .footer-links a:first-child {
     max-width: 330px;
   }
 
-  .metaverse .row--with-border .map img {
+  .game .row--with-border .map img {
     width: 405px;
     max-width: initial;
   }
 
-  .metaverse .map-description {
+  .game .map-description {
     margin-top: 0;
   }
 

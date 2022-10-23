@@ -23,8 +23,8 @@ $(document).ready(function () {
     var windowWidth = $(window).width();
     var remains;
 
-    if(href === '#metaverse'){
-      remains = windowWidth > 978 ? 0 : -70;
+    if(href === '#gameplay'){
+      remains = -70;
     } else {
       remains = windowWidth > 978 ? 50 : -50;
     }
@@ -112,7 +112,7 @@ $(document).ready(function () {
 
   $(window).on("resize", changeSliderWidth)
 
-  $(".metaverse-slider").on("init", function (event, slick) {
+  $(".metaverse-slider").on("init", function () {
     changeSliderWidth()
   })
 
@@ -223,28 +223,6 @@ $(document).ready(function () {
   $(".header-menu li a ").click(function (e) {
     $(".burger-menu").removeClass("active")
     $("body").removeClass("block-scroll")
-  })
-
-  // key features slider
-  $(window).on("load resize orientationchange", function () {
-    if ($(window).width() > 1135) {
-      if ($(".key-content").hasClass("slick-initialized")) {
-        $(".key-content").slick("unslick")
-      }
-    } else if (!$(".key-content").hasClass("slick-initialized")) {
-      $(".key-content").slick({
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        speed: 1000,
-        variableWidth: true,
-        dots: true,
-        swipe: true,
-        customPaging: function (slick, index) {
-          return "<span></span>"
-        },
-      })
-    }
   })
 
   // main video-background script
