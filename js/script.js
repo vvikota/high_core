@@ -23,9 +23,9 @@ $(document).ready(function () {
     var windowWidth = $(window).width();
     var remains;
 
-    if(href === '#gameplay'){
+    if(href === '#gameplay' || href === '#game'){
       remains = -70;
-    } else {
+    }  else {
       remains = windowWidth > 978 ? 50 : -50;
     }
 

@@ -804,20 +804,15 @@ section.metaverse{
   padding-top: 30px;
 }
 
-.metaverse .slide .img-wrapper picture{
-  position: relative;
-}
-
 .metaverse .slide .img-wrapper picture:after {
   position: absolute;
   content: '';
-  top: -5px;
+  top: 25px;
   left: -8px;
   width: 104%;
-  height: 104%;
+  height: calc(104% - 30px);
   background-image: url('../media/img/iPad Pro.png');
   background-size: 100% 100%;
-
   -webkit-transform: rotate(6.2deg);
   -ms-transform: rotate(6.2deg);
   transform: rotate(6.2deg);
