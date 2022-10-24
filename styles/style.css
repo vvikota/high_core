@@ -514,6 +514,7 @@ header .header-menu {
 .home {
   position: relative;
   padding-top: 195px;
+  padding-bottom: 400px;
 }
 
 .home:after {
