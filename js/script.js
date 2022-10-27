@@ -1,9 +1,3 @@
-// width >= 1440
-const variables = {
-  leftContentPadding: 80,
-  asideWidth: 106,
-}
-
 $(document).ready(function () {
 
   // header menu actions
@@ -234,6 +228,20 @@ $(document).ready(function () {
 
     if ($(window).width() > 1150 && !$(".main-background").length) {
       $(videoContainer).append(video)
+    }
+
+    // change height main section
+    const browserWidth = document.documentElement.clientWidth;
+    const browserHeight = document.documentElement.clientHeight;
+
+    if(browserWidth > 1420 && browserHeight > 1050){
+      $(".video").css("margin-top", (browserHeight - 1050) + "px");
+      $(".home").css("margin-top", ((browserHeight - 1090) / 2 + 150) + "px");
+      $(".main-background-wrapper").css("top", ((browserHeight - 1090) / 2) + "px");
+    } else {
+      $(".video").css("margin-top", "")
+      $(".home").css("margin-top", "");
+      $(".main-background-wrapper").css("top", -100 + "px");
     }
   })
 })
