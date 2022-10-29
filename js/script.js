@@ -235,9 +235,9 @@ $(document).ready(function () {
     const browserHeight = document.documentElement.clientHeight;
 
     if(browserWidth > 1420 && browserHeight > 1050){
-      $(".video").css("margin-top", (browserHeight - 1050) + "px");
-      $(".home").css("margin-top", ((browserHeight - 1090) / 2 + 150) + "px");
-      $(".main-background-wrapper").css("top", ((browserHeight - 1090) / 2) + "px");
+      $(".video").css("margin-top", (browserHeight - 1400) + "px");
+      $(".home").css("margin-top", ((browserHeight - 1150) / 2 + 150) + "px");
+      $(".main-background-wrapper").css("top", ((browserHeight - 1190) / 2) + "px");
     } else {
       $(".video").css("margin-top", "")
       $(".home").css("margin-top", "");
